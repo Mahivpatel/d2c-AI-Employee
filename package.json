@@ -1,0 +1,19 @@
+{
+  "name": "d2c-ai-employee",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/backend",
+    "packages/frontend",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:api":     "npm run dev --workspace=packages/backend",
+    "dev:worker":  "npm run worker --workspace=packages/backend",
+    "dev:web":     "npm run dev --workspace=packages/frontend",
+    "db:generate": "npm run db:generate --workspace=packages/backend",
+    "db:migrate":  "npm run db:migrate --workspace=packages/backend",
+    "db:studio":   "npm run db:studio --workspace=packages/backend",
+    "typecheck":   "tsc --build"
+  }
+}
