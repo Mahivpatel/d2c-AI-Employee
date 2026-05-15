@@ -52,6 +52,32 @@ export interface ShopifyOrder {
   source_name: string;            // web | ios | android | pos
 }
 
+export interface ShopifyProduct {
+  id: number;
+  title: string;
+  created_at: string;
+  updated_at: string;
+  vendor: string;
+  product_type: string;
+  status: string;
+  tags: string;
+  variants: { id: number; price: string; sku: string | null }[];
+}
+
+export interface ShopifyCustomer {
+  id: number;
+  email: string | null;
+  created_at: string;
+  updated_at: string;
+  first_name: string | null;
+  last_name: string | null;
+  orders_count: number;
+  state: string;
+  total_spent: string;
+  tags: string;
+  currency: string;
+  default_address?: ShopifyAddress;
+}
 // ── Normalizer (pure function — easy to unit-test) ────────────────────────────
 
 /**
@@ -115,6 +141,81 @@ export function normalizeShopifyOrder(
   };
 }
 
+export function normalizeShopifyProduct(
+  product: ShopifyProduct,
+): NormalizedFact {
+  const firstVariant = product.variants?.[0];
+  const amountInr = firstVariant ? parseFloat(firstVariant.price) : 0;
+  
+  const dimensions: Record<string, unknown> = {
+    title: product.title,
+    vendor: product.vendor,
+    product_type: product.product_type,
+    status: product.status,
+    tags: product.tags,
+    skus: product.variants?.map(v => v.sku).filter(Boolean).join(",") || "",
+  };
+
+  return {
+    source:           "shopify",
+    entityType:       "product",
+    occurredAt:       new Date(product.created_at),
+    amountInr,
+    currencyOriginal: "UNKNOWN",
+    fxRateUsed:       1,
+    rawId:            String(product.id),
+    rawPayload:       product as unknown as Record<string, unknown>,
+    dimensions,
+  };
+}
+
+export function normalizeShopifyCustomer(
+  customer: ShopifyCustomer,
+  fxRate: number = config.DEFAULT_FX_RATE_USD_INR,
+): NormalizedFact {
+  const originalCurrency = (customer.currency || "INR").toUpperCase();
+  const originalAmount = parseFloat(customer.total_spent || "0");
+
+  let amountInr: number;
+  let fxRateUsed: number;
+
+  if (originalCurrency === "INR") {
+    amountInr = originalAmount;
+    fxRateUsed = 1;
+  } else if (originalCurrency === "USD") {
+    amountInr = originalAmount * fxRate;
+    fxRateUsed = fxRate;
+  } else {
+    amountInr = originalAmount;
+    fxRateUsed = 0;
+  }
+
+  const dimensions: Record<string, unknown> = {
+    email: customer.email,
+    first_name: customer.first_name,
+    last_name: customer.last_name,
+    orders_count: customer.orders_count,
+    state: customer.state,
+    tags: customer.tags,
+    city: customer.default_address?.city,
+    province: customer.default_address?.province,
+    country: customer.default_address?.country,
+    pincode: customer.default_address?.zip,
+  };
+
+  return {
+    source:           "shopify",
+    entityType:       "customer",
+    occurredAt:       new Date(customer.created_at),
+    amountInr,
+    currencyOriginal: originalCurrency,
+    fxRateUsed,
+    rawId:            String(customer.id),
+    rawPayload:       customer as unknown as Record<string, unknown>,
+    dimensions,
+  };
+}
+
 // ── ShopifyConnector class ────────────────────────────────────────────────────
 
 export class ShopifyConnector implements BaseConnector {
@@ -157,12 +258,20 @@ export class ShopifyConnector implements BaseConnector {
   schema(): ConnectorSchema {
     return {
       source:       "shopify",
-      entityTypes:  ["order"],
+      entityTypes:  ["order", "product", "customer"],
       dimensionKeys: [
         "order_name",
         "financial_status",
         "fulfillment_status",
         "source_name",
+        "title",
+        "vendor",
+        "product_type",
+        "status",
+        "email",
+        "first_name",
+        "last_name",
+        "orders_count",
         "tags",
         "city",
         "state",
@@ -173,8 +282,8 @@ export class ShopifyConnector implements BaseConnector {
         "customer_id",
       ],
       description:
-        "Shopify e-commerce orders. Each row is one order with INR amount, " +
-        "geo, SKU list, and fulfillment state.",
+        "Shopify e-commerce data (orders, products, customers). Each row is one entity with INR amount, " +
+        "geo, tags, and relevant state.",
     };
   }
 
@@ -186,18 +295,22 @@ export class ShopifyConnector implements BaseConnector {
   ): Promise<NormalizedFact[]> {
     this.assertAuthenticated();
 
-    if (entity !== "order") {
-      throw new Error(`ShopifyConnector: unsupported entity "${entity}". Use "order".`);
+    if (!["order", "product", "customer"].includes(entity)) {
+      throw new Error(`ShopifyConnector: unsupported entity "${entity}". Use "order", "product", or "customer".`);
     }
 
     const params = new URLSearchParams();
     params.set("limit", String(filters.limit ?? 250));
-    params.set("status", filters.status ?? "any");
+    
+    if (entity === "order") {
+      params.set("status", filters.status ?? "any");
+    }
+
     if (filters.dateFrom) params.set("created_at_min", filters.dateFrom.toISOString());
     if (filters.dateTo)   params.set("created_at_max", filters.dateTo.toISOString());
     if (filters.sinceId)  params.set("since_id", filters.sinceId);
 
-    const url = `${this.baseUrl}/orders.json?${params.toString()}`;
+    const url = `${this.baseUrl}/${entity}s.json?${params.toString()}`;
 
     console.log(`[shopify] GET ${url}`);
 
@@ -205,16 +318,25 @@ export class ShopifyConnector implements BaseConnector {
 
     if (!res.ok) {
       throw new Error(
-        `ShopifyConnector: fetch orders failed — ${res.status} ${res.statusText}`,
+        `ShopifyConnector: fetch ${entity}s failed — ${res.status} ${res.statusText}`,
       );
     }
 
-    const body = (await res.json()) as { orders: ShopifyOrder[] };
-    const orders: ShopifyOrder[] = body.orders ?? [];
+    const body = (await res.json()) as any;
 
-    console.log(`[shopify] fetched ${orders.length} orders`);
-
-    return orders.map((o) => normalizeShopifyOrder(o));
+    if (entity === "order") {
+      const items: ShopifyOrder[] = body.orders ?? [];
+      console.log(`[shopify] fetched ${items.length} orders`);
+      return items.map((o) => normalizeShopifyOrder(o));
+    } else if (entity === "product") {
+      const items: ShopifyProduct[] = body.products ?? [];
+      console.log(`[shopify] fetched ${items.length} products`);
+      return items.map((p) => normalizeShopifyProduct(p));
+    } else {
+      const items: ShopifyCustomer[] = body.customers ?? [];
+      console.log(`[shopify] fetched ${items.length} customers`);
+      return items.map((c) => normalizeShopifyCustomer(c));
+    }
   }
 
   // ── BaseConnector.write() ─────────────────────────────────────────────────

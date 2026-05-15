@@ -6,7 +6,15 @@
 //   or: npx vitest run src/connectors/shopify.test.ts
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { normalizeShopifyOrder, ShopifyOrder, ShopifyConnector } from "./shopify";
+import {
+  normalizeShopifyOrder,
+  normalizeShopifyProduct,
+  normalizeShopifyCustomer,
+  ShopifyOrder,
+  ShopifyProduct,
+  ShopifyCustomer,
+  ShopifyConnector,
+} from "./shopify";
 import { NormalizedFact } from "./base";
 
 // ── Fixtures ──────────────────────────────────────────────────────────────────
@@ -33,6 +41,39 @@ function makeOrder(overrides: Partial<ShopifyOrder> = {}): ShopifyOrder {
     ],
     tags: "vip,repeat",
     source_name: "web",
+    ...overrides,
+  };
+}
+
+function makeProduct(overrides: Partial<ShopifyProduct> = {}): ShopifyProduct {
+  return {
+    id: 1_000_000_001,
+    title: "Widget A",
+    created_at: "2024-03-15T10:30:00+05:30",
+    updated_at: "2024-03-15T10:30:00+05:30",
+    vendor: "Acme Corp",
+    product_type: "Widget",
+    status: "active",
+    tags: "new,featured",
+    variants: [{ id: 1, price: "999.50", sku: "SKU-001" }],
+    ...overrides,
+  };
+}
+
+function makeCustomer(overrides: Partial<ShopifyCustomer> = {}): ShopifyCustomer {
+  return {
+    id: 9_900_000_001,
+    email: "test@example.com",
+    created_at: "2024-03-15T10:30:00+05:30",
+    updated_at: "2024-03-15T10:30:00+05:30",
+    first_name: "John",
+    last_name: "Doe",
+    orders_count: 5,
+    state: "enabled",
+    total_spent: "5000.00",
+    tags: "vip",
+    currency: "INR",
+    default_address: { city: "Mumbai", province: "Maharashtra", country: "IN", zip: "400063" },
     ...overrides,
   };
 }
@@ -117,6 +158,32 @@ describe("normalizeShopifyOrder", () => {
   });
 });
 
+// ── normalizeShopifyProduct tests ─────────────────────────────────────────────
+
+describe("normalizeShopifyProduct", () => {
+  it("returns source='shopify' and entity_type='product'", () => {
+    const fact = normalizeShopifyProduct(makeProduct());
+    expect(fact.source).toBe("shopify");
+    expect(fact.entityType).toBe("product");
+    expect(fact.amountInr).toBeCloseTo(999.50);
+    expect(fact.dimensions["title"]).toBe("Widget A");
+    expect(fact.dimensions["skus"]).toBe("SKU-001");
+  });
+});
+
+// ── normalizeShopifyCustomer tests ────────────────────────────────────────────
+
+describe("normalizeShopifyCustomer", () => {
+  it("returns source='shopify' and entity_type='customer'", () => {
+    const fact = normalizeShopifyCustomer(makeCustomer());
+    expect(fact.source).toBe("shopify");
+    expect(fact.entityType).toBe("customer");
+    expect(fact.amountInr).toBeCloseTo(5000);
+    expect(fact.dimensions["email"]).toBe("test@example.com");
+    expect(fact.dimensions["city"]).toBe("Mumbai");
+  });
+});
+
 // ── Full batch normalization ──────────────────────────────────────────────────
 
 describe("batch normalization (array of orders)", () => {
@@ -190,13 +257,41 @@ describe("ShopifyConnector.fetch() with mocked API", () => {
     });
   });
 
+  it("fetches and normalizes products", async () => {
+    const mockProducts = [makeProduct({ id: 1 }), makeProduct({ id: 2 })];
+    vi.stubGlobal("fetch", vi.fn(async (url: string) => {
+      if (url.includes("shop.json")) return new Response(JSON.stringify({ shop: { id: 1 } }));
+      return new Response(JSON.stringify({ products: mockProducts }));
+    }));
+
+    const connector = new ShopifyConnector("test-store.myshopify.com", "shpat_test_token");
+    await connector.authenticate();
+    const result = await connector.fetch("product");
+    expect(result).toHaveLength(2);
+    expect(result[0].entityType).toBe("product");
+  });
+
+  it("fetches and normalizes customers", async () => {
+    const mockCustomers = [makeCustomer({ id: 1 }), makeCustomer({ id: 2 })];
+    vi.stubGlobal("fetch", vi.fn(async (url: string) => {
+      if (url.includes("shop.json")) return new Response(JSON.stringify({ shop: { id: 1 } }));
+      return new Response(JSON.stringify({ customers: mockCustomers }));
+    }));
+
+    const connector = new ShopifyConnector("test-store.myshopify.com", "shpat_test_token");
+    await connector.authenticate();
+    const result = await connector.fetch("customer");
+    expect(result).toHaveLength(2);
+    expect(result[0].entityType).toBe("customer");
+  });
+
   it("throws on unsupported entity type", async () => {
     const connector = new ShopifyConnector(
       "test-store.myshopify.com",
       "shpat_test_token",
     );
     await connector.authenticate();
-    await expect(connector.fetch("product")).rejects.toThrow(
+    await expect(connector.fetch("inventory")).rejects.toThrow(
       /unsupported entity/,
     );
   });

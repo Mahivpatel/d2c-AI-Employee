@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .env
+shopify_seed_orders_v2.js
 *.js.map
 *.tsbuildinfo
 .DS_Store

@@ -6,7 +6,8 @@ dotenv.config({ path: "../../.env" });
 const EnvSchema = z.object({
   DATABASE_URL:            z.string().url(),
   REDIS_URL:               z.string().url(),
-  ANTHROPIC_API_KEY:       z.string().min(1),
+  ANTHROPIC_API_KEY:       z.string().min(1).optional().default(''),
+  GROQ_API_KEY:            z.string().min(1),
   SHOPIFY_SHOP_DOMAIN:     z.string().default(""),
   SHOPIFY_ACCESS_TOKEN:    z.string().default(""),
   META_ACCESS_TOKEN:       z.string().default(""),
