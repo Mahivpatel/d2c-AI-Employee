@@ -1,5 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
+import { runChatLoop } from "../../chat/loop";
+import { verifyCitations } from "../../chat/verifyCitations";
 
 const router = Router();
 
@@ -14,12 +16,20 @@ const ChatRequestSchema = z.object({
 router.post("/", async (req, res, next) => {
   try {
     const body = ChatRequestSchema.parse(req.body);
-    // Full tool-use loop + citation post-processor added Day 4
-    res.json({
-      response: "Chat layer scaffolded. Tool-use loop coming Day 4.",
-      citations: [],
-      toolCallsMade: 0,
-    });
+    
+    // Combine history and current message
+    const messages = [...body.history, { role: "user", content: body.message }];
+
+    // Run the chat loop
+    const { text, toolResults } = await runChatLoop(body.merchantId, messages);
+    
+    // Verify citations
+    const { verified } = verifyCitations(text ?? '', toolResults);
+
+    // Optional: save to database if saveChatTurn is implemented
+    // await db.saveChatTurn({ merchantId: body.merchantId, messages, response: verified });
+
+    res.json({ reply: verified });
   } catch (err) {
     next(err);
   }

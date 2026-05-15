@@ -5,10 +5,11 @@ import merchantsRouter from "./api/routes/merchants";
 import syncRouter      from "./api/routes/sync";
 import metricsRouter   from "./api/routes/metrics";
 import agentsRouter    from "./api/routes/agents";
+import chatRouter      from "./api/routes/chat";
 
 const app = express();
 
-app.use(cors({ origin: ["http://localhost:5173", "http://localhost:3000"] }));
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 app.get("/health", (_req, res) => {
@@ -19,6 +20,7 @@ app.use("/api/merchants", merchantsRouter);
 app.use("/api/sync",      syncRouter);
 app.use("/api/metrics",   metricsRouter);
 app.use("/api/agents",    agentsRouter);
+app.use("/api/chat",      chatRouter);
 
 app.listen(config.PORT, () => {
   console.log("API running on http://localhost:" + config.PORT);

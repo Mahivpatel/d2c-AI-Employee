@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D2C AI Analyst</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem; }
+    #chat-log { height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+    .msg { margin-bottom: 1rem; padding: 0.8rem; border-radius: 6px; line-height: 1.4; }
+    .user { background: #e3f2fd; text-align: right; }
+    .assistant { background: #f5f5f5; text-align: left; border: 1px solid #eee; }
+    .citation { color: #888; font-size: 0.8em; background: #e0e0e0; padding: 2px 6px; border-radius: 12px; white-space: nowrap; margin-left: 4px; }
+    .toolbar { display: flex; gap: 0.5rem; margin-bottom: 1rem; align-items: center; }
+    .input-row { display: flex; gap: 0.5rem; }
+    input[type="text"], select { flex: 1; padding: 0.8rem; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
+    button { padding: 0.8rem 1.5rem; border: none; background: #007bff; color: white; border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: bold; }
+    button:hover { background: #0056b3; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <h2>D2C AI Analyst</h2>
+  <p style="color: #666; font-size: 0.9em;">Ask me about Shopify revenue, orders, or products. <br/>Note: I do not have access to ads or logistics data.</p>
+  <div class="toolbar">
+    <select id="merchant"></select>
+  </div>
+  <div id="chat-log"></div>
+  <form id="chat-form" class="input-row">
+    <input type="text" id="message" placeholder="e.g., What was the revenue last week?" required autocomplete="off" />
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('message');
+    const merchantSelect = document.getElementById('merchant');
+    const log = document.getElementById('chat-log');
+
+    let history = [];
+    let merchantId = '';
+
+    function appendMessage(role, content) {
+      const div = document.createElement('div');
+      div.className = `msg ${role}`;
+      
+      // Highlight citations using regex replacement
+      const citationRegex = /\[src: shopify, fact_ids:([^\]]+)\]/g;
+      let htmlContent = content.replace(citationRegex, (match, p1) => {
+        return `<span class="citation">src: shopify, facts: ${p1.trim()}</span>`;
+      });
+      
+      div.innerHTML = `<strong>${role === 'user' ? 'You' : 'Analyst'}:</strong><br/>${htmlContent}`;
+      log.appendChild(div);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text || !merchantId) return;
+
+      appendMessage('user', text);
+      input.value = '';
+      const submitBtn = form.querySelector('button');
+      submitBtn.disabled = true;
+
+      try {
+        // Adjust URL/port based on where your backend express server is running
+        const response = await fetch('http://localhost:3000/api/chat', { 
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            merchantId,
+            message: text,
+            history
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const reply = data.reply || "No response received.";
+        
+        appendMessage('assistant', reply);
+        
+        history.push({ role: 'user', content: text });
+        history.push({ role: 'assistant', content: reply });
+        
+      } catch (err) {
+        appendMessage('assistant', `<em>Error communicating with server: ${err.message}</em>`);
+      } finally {
+        submitBtn.disabled = false;
+        input.focus();
+      }
+    });
+
+    merchantSelect.addEventListener('change', () => {
+      merchantId = merchantSelect.value;
+      history = [];
+      log.innerHTML = '';
+      input.disabled = !merchantId;
+      form.querySelector('button').disabled = !merchantId;
+    });
+
+    async function loadMerchants() {
+      input.disabled = true;
+      form.querySelector('button').disabled = true;
+
+      try {
+        const response = await fetch('http://localhost:3000/api/merchants');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const merchants = await response.json();
+        merchantSelect.innerHTML = merchants.map((merchant) => {
+          return `<option value="${merchant.id}">${merchant.name}</option>`;
+        }).join('');
+
+        merchantId = merchants[0]?.id || '';
+        input.disabled = !merchantId;
+        form.querySelector('button').disabled = !merchantId;
+
+        if (!merchantId) {
+          appendMessage('assistant', '<em>No active merchants found.</em>');
+        }
+      } catch (err) {
+        appendMessage('assistant', `<em>Error loading merchants: ${err.message}</em>`);
+      }
+    }
+
+    loadMerchants();
+  </script>
+</body>
+</html>

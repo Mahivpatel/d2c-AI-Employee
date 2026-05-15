@@ -8,12 +8,22 @@
     "packages/shared"
   ],
   "scripts": {
-    "dev:api":     "npm run dev --workspace=packages/backend",
-    "dev:worker":  "npm run worker --workspace=packages/backend",
-    "dev:web":     "npm run dev --workspace=packages/frontend",
+    "dev:api": "npm run dev --workspace=packages/backend",
+    "dev:worker": "npm run worker --workspace=packages/backend",
+    "dev:web": "npm run dev --workspace=packages/frontend",
     "db:generate": "npm run db:generate --workspace=packages/backend",
-    "db:migrate":  "npm run db:migrate --workspace=packages/backend",
-    "db:studio":   "npm run db:studio --workspace=packages/backend",
-    "typecheck":   "tsc --build"
+    "db:migrate": "npm run db:migrate --workspace=packages/backend",
+    "db:studio": "npm run db:studio --workspace=packages/backend",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@ai-sdk/groq": "^3.0.39",
+    "ai": "^6.0.182",
+    "groq-sdk": "^1.2.0",
+    "ollama-ai-provider": "^1.2.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0"
   }
 }

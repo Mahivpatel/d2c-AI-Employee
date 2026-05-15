@@ -48,7 +48,7 @@ const WriteRequestSchema = z.object({
   merchantId: z.string().uuid(),
   connector:  z.enum(["shopify", "meta_ads", "shiprocket"]),
   entity:     z.string().min(1),
-  payload:    z.record(z.unknown()),
+  payload:    z.record(z.string(), z.unknown()),
 });
 
 // ── POST /api/sync — fetch & upsert ──────────────────────────────────────────
