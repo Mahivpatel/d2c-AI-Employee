@@ -7,7 +7,7 @@ import { subDays } from "../../core/dateUtils";
 
 const router = Router();
 
-const MetricsQuerySchema = z.object({
+export const MetricsQuerySchema = z.object({
   merchantId: z.string().uuid(),
   periodDays: z.coerce.number().min(1).max(90).default(7),
 });

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-surface text-white font-sans;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(58,87,242,0.12) 0%, transparent 60%);
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-surface; }
+  ::-webkit-scrollbar-thumb { @apply bg-surface-border rounded-full; }
+}
+
+/* ── Components ────────────────────────────────────────────────────────────── */
+@layer components {
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-surface-card border border-surface-border rounded-2xl;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl
+           bg-brand-600 hover:bg-brand-500 active:bg-brand-700
+           text-white font-semibold text-sm
+           transition-all duration-150
+           disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl
+           text-slate-300 hover:bg-surface-border hover:text-white
+           font-medium text-sm transition-all duration-150;
+  }
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl
+           bg-rose-600/20 hover:bg-rose-600/40 active:bg-rose-600/60
+           text-rose-400 hover:text-rose-300
+           font-semibold text-sm border border-rose-800/40
+           transition-all duration-150;
+  }
+  .btn-success {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl
+           bg-emerald-600/20 hover:bg-emerald-600/40 active:bg-emerald-600/60
+           text-emerald-400 hover:text-emerald-300
+           font-semibold text-sm border border-emerald-800/40
+           transition-all duration-150;
+  }
+
+  /* ── Inputs ── */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl
+           bg-surface-input border border-surface-border
+           text-white placeholder-slate-500
+           focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50
+           transition-colors duration-150 text-sm;
+  }
+
+  /* ── Badges ── */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .badge-blue   { @apply badge bg-brand-500/20 text-brand-300 border border-brand-500/30; }
+  .badge-green  { @apply badge bg-emerald-500/20 text-emerald-300 border border-emerald-500/30; }
+  .badge-yellow { @apply badge bg-amber-500/20 text-amber-300 border border-amber-500/30; }
+  .badge-red    { @apply badge bg-rose-500/20 text-rose-300 border border-rose-500/30; }
+  .badge-slate  { @apply badge bg-slate-600/40 text-slate-300 border border-slate-600/40; }
+
+  /* ── Citation chip ── */
+  .citation-chip {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs
+           bg-brand-500/20 text-brand-300 border border-brand-500/30
+           cursor-pointer hover:bg-brand-500/40 transition-colors duration-150
+           font-mono;
+  }
+
+  /* ── Tab bar ── */
+  .tab-item {
+    @apply flex flex-col items-center justify-center gap-1 flex-1
+           py-2 text-xs text-slate-500 transition-colors duration-150
+           hover:text-slate-200;
+  }
+  .tab-item.active {
+    @apply text-brand-400;
+  }
+
+  /* ── Typing indicator dots ── */
+  .typing-dot {
+    @apply w-2 h-2 rounded-full bg-brand-400;
+    animation: pulseDot 1.4s ease-in-out infinite;
+  }
+  .typing-dot:nth-child(1) { animation-delay: 0s; }
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+}
