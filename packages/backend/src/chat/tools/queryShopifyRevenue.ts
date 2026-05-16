@@ -6,6 +6,7 @@ import { resolveMerchantId } from './context';
 
 export const queryShopifyRevenue = tool({
   description: `Get Shopify order revenue and counts for a date range.
+    Date ranges are evaluated using the Shopify order processed_at timestamp.
     ALWAYS call this before stating any revenue/order number.
     Returns fact_ids that must appear in your response citation.`,
   inputSchema: z.object({
@@ -22,19 +23,21 @@ export const queryShopifyRevenue = tool({
     date_from = date_from || start_date;
     date_to = date_to || end_date;
 
+    const processedAtSql = sql`NULLIF(raw_payload->>'processed_at', '')::timestamptz`;
+
     const periodSql =
       group_by === 'total'
         ? sql<string>`'total'`
-        : sql`date_trunc(${group_by}, occurred_at)`;
+        : sql`date_trunc(${group_by}, ${processedAtSql})`;
 
     const dateFilter =
       date_from && date_to
-        ? sql`AND occurred_at >= ${date_from}::date
-              AND occurred_at < (${date_to}::date + interval '1 day')`
+        ? sql`AND ${processedAtSql} >= ${date_from}::date
+              AND ${processedAtSql} < (${date_to}::date + interval '1 day')`
         : date_from
-          ? sql`AND occurred_at >= ${date_from}::date`
+          ? sql`AND ${processedAtSql} >= ${date_from}::date`
           : date_to
-            ? sql`AND occurred_at < (${date_to}::date + interval '1 day')`
+            ? sql`AND ${processedAtSql} < (${date_to}::date + interval '1 day')`
             : sql``;
 
     const { rows } = await db.execute(sql`
@@ -60,6 +63,7 @@ export const queryShopifyRevenue = tool({
       date_from,
       date_to,
       source: 'shopify',
+      date_field: 'processed_at',
     };
   },
 });
