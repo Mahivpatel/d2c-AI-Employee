@@ -9,6 +9,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import {
   normalizeShopifyOrder,
   normalizeShopifyProduct,
+  normalizeShopifyInventory,
   normalizeShopifyCustomer,
   ShopifyOrder,
   ShopifyProduct,
@@ -55,7 +56,15 @@ function makeProduct(overrides: Partial<ShopifyProduct> = {}): ShopifyProduct {
     product_type: "Widget",
     status: "active",
     tags: "new,featured",
-    variants: [{ id: 1, price: "999.50", sku: "SKU-001" }],
+    variants: [{
+      id: 1,
+      price: "999.50",
+      sku: "SKU-001",
+      title: "Default Title",
+      inventory_item_id: 5001,
+      inventory_quantity: 12,
+      updated_at: "2024-03-16T10:30:00+05:30",
+    }],
     ...overrides,
   };
 }
@@ -168,6 +177,35 @@ describe("normalizeShopifyProduct", () => {
     expect(fact.amountInr).toBeCloseTo(999.50);
     expect(fact.dimensions["title"]).toBe("Widget A");
     expect(fact.dimensions["skus"]).toBe("SKU-001");
+  });
+});
+
+describe("normalizeShopifyInventory", () => {
+  it("returns inventory facts per variant with Shopify cost when available", () => {
+    const product = makeProduct();
+    const fact = normalizeShopifyInventory(product, product.variants[0], {
+      id: 5001,
+      cost: "420.00",
+      sku: "SKU-001",
+    });
+
+    expect(fact.source).toBe("shopify");
+    expect(fact.entityType).toBe("inventory");
+    expect(fact.rawId).toBe("inventory:1");
+    expect(fact.amountInr).toBeCloseTo(5040);
+    expect(fact.dimensions["sku"]).toBe("SKU-001");
+    expect(fact.dimensions["quantity_available"]).toBe(12);
+    expect(fact.dimensions["cost_per_item"]).toBe(420);
+    expect(fact.dimensions["cost_source"]).toBe("shopify_inventory_item");
+  });
+
+  it("falls back to estimated cost from variant price when Shopify cost is missing", () => {
+    const product = makeProduct();
+    const fact = normalizeShopifyInventory(product, product.variants[0]);
+
+    expect(fact.entityType).toBe("inventory");
+    expect(fact.dimensions["cost_source"]).toBe("estimated_from_price");
+    expect(Number(fact.dimensions["cost_per_item"])).toBeGreaterThan(0);
   });
 });
 
@@ -285,13 +323,40 @@ describe("ShopifyConnector.fetch() with mocked API", () => {
     expect(result[0].entityType).toBe("customer");
   });
 
+  it("fetches and normalizes inventory from products and inventory_items", async () => {
+    const mockProducts = [makeProduct({ id: 1 })];
+    vi.stubGlobal("fetch", vi.fn(async (url: string) => {
+      if (url.includes("shop.json")) return new Response(JSON.stringify({ shop: { id: 1 } }));
+      if (url.includes("inventory_items.json")) {
+        return new Response(JSON.stringify({
+          inventory_items: [{ id: 5001, cost: "420.00", sku: "SKU-001" }],
+        }));
+      }
+      if (url.includes("inventory_levels.json")) {
+        return new Response(JSON.stringify({
+          inventory_levels: [{ inventory_item_id: 5001, available: 18 }],
+        }));
+      }
+      return new Response(JSON.stringify({ products: mockProducts }));
+    }));
+
+    const connector = new ShopifyConnector("test-store.myshopify.com", "shpat_test_token");
+    await connector.authenticate();
+    const result = await connector.fetch("inventory");
+
+    expect(result).toHaveLength(1);
+    expect(result[0].entityType).toBe("inventory");
+    expect(result[0].dimensions["quantity_available"]).toBe(18);
+    expect(result[0].dimensions["cost_source"]).toBe("shopify_inventory_item");
+  });
+
   it("throws on unsupported entity type", async () => {
     const connector = new ShopifyConnector(
       "test-store.myshopify.com",
       "shpat_test_token",
     );
     await connector.authenticate();
-    await expect(connector.fetch("inventory")).rejects.toThrow(
+    await expect(connector.fetch("shipment")).rejects.toThrow(
       /unsupported entity/,
     );
   });
@@ -443,4 +508,3 @@ describe("ShopifyConnector.write() with mocked API", () => {
     ).rejects.toThrow(/404/);
   });
 });
-

@@ -9,6 +9,7 @@ import {
   ChatBubbleBottomCenterTextIcon as ChatSolid,
   InboxArrowDownIcon as InboxSolid,
 } from '@heroicons/react/24/solid';
+import type { Merchant } from '../api/client';
 
 const tabs = [
   { to: '/metrics', label: 'Metrics', Icon: ChartBarIcon,                      ActiveIcon: ChartBarSolid },
@@ -50,8 +51,56 @@ export function BottomTabNav() {
   );
 }
 
-// Desktop sidebar — hidden on mobile
-export function DesktopSidebar({ merchant }: { merchant?: { name: string } }) {
+interface MerchantSelectorProps {
+  merchants: Merchant[];
+  merchantId: string | null;
+  onMerchantChange: (merchantId: string) => void;
+  compact?: boolean;
+}
+
+export function MerchantSelector({
+  merchants,
+  merchantId,
+  onMerchantChange,
+  compact = false,
+}: MerchantSelectorProps) {
+  return (
+    <label className="block">
+      <span className="sr-only">Select merchant</span>
+      <select
+        id={compact ? 'mobile-merchant-select' : 'sidebar-merchant-select'}
+        value={merchantId ?? ''}
+        onChange={(e) => onMerchantChange(e.target.value)}
+        disabled={merchants.length === 0}
+        className={
+          compact
+            ? 'input h-9 w-full py-1.5 text-xs'
+            : 'input h-10 w-full py-2 text-xs'
+        }
+      >
+        {merchants.length === 0 && (
+          <option value="">Loading merchants...</option>
+        )}
+        {merchants.map((merchant) => (
+          <option key={merchant.id} value={merchant.id}>
+            {merchant.name}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+// Desktop sidebar - hidden on mobile
+export function DesktopSidebar({
+  merchants,
+  merchantId,
+  onMerchantChange,
+}: {
+  merchants: Merchant[];
+  merchantId: string | null;
+  onMerchantChange: (merchantId: string) => void;
+}) {
   const { pathname } = useLocation();
 
   return (
@@ -64,9 +113,13 @@ export function DesktopSidebar({ merchant }: { merchant?: { name: string } }) {
       {/* Logo */}
       <div className="mb-6 px-2">
         <h1 className="text-lg font-bold text-white tracking-tight">D2C AI</h1>
-        {merchant && (
-          <p className="text-xs text-slate-500 truncate mt-0.5">{merchant.name}</p>
-        )}
+        <div className="mt-3">
+          <MerchantSelector
+            merchants={merchants}
+            merchantId={merchantId}
+            onMerchantChange={onMerchantChange}
+          />
+        </div>
       </div>
 
       {tabs.map(({ to, label, Icon, ActiveIcon }) => {

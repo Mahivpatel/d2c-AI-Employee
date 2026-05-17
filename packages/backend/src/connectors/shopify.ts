@@ -32,6 +32,16 @@ interface ShopifyLineItem {
   price: string;
 }
 
+interface ShopifyProductVariant {
+  id: number;
+  price: string;
+  sku: string | null;
+  title?: string;
+  inventory_item_id?: number;
+  inventory_quantity?: number;
+  updated_at?: string;
+}
+
 export interface ShopifyOrder {
   id: number;
   name: string;                   // "#1001"
@@ -61,7 +71,18 @@ export interface ShopifyProduct {
   product_type: string;
   status: string;
   tags: string;
-  variants: { id: number; price: string; sku: string | null }[];
+  variants: ShopifyProductVariant[];
+}
+
+interface ShopifyInventoryItem {
+  id: number;
+  cost?: string | null;
+  sku?: string | null;
+}
+
+interface ShopifyInventoryLevel {
+  inventory_item_id: number;
+  available?: number | null;
 }
 
 export interface ShopifyCustomer {
@@ -169,6 +190,54 @@ export function normalizeShopifyProduct(
   };
 }
 
+export function normalizeShopifyInventory(
+  product: ShopifyProduct,
+  variant: ShopifyProductVariant,
+  inventoryItem?: ShopifyInventoryItem,
+): NormalizedFact {
+  const price = parseFloat(variant.price || "0");
+  const quantityAvailable = Number(variant.inventory_quantity ?? 0);
+  const shopifyCost = inventoryItem?.cost != null
+    ? parseFloat(String(inventoryItem.cost))
+    : NaN;
+  const hasShopifyCost = Number.isFinite(shopifyCost) && shopifyCost > 0;
+  const costPerItem = hasShopifyCost ? shopifyCost : Math.round(price * 0.45 * 100) / 100;
+  const sku = variant.sku || inventoryItem?.sku || `${product.id}-${variant.id}`;
+
+  const dimensions: Record<string, unknown> = {
+    sku,
+    product_title: product.title,
+    variant_title: variant.title,
+    product_id: product.id,
+    variant_id: variant.id,
+    inventory_item_id: variant.inventory_item_id ?? null,
+    quantity_available: quantityAvailable,
+    cost_per_item: costPerItem,
+    cost_source: hasShopifyCost ? "shopify_inventory_item" : "estimated_from_price",
+    price,
+    vendor: product.vendor,
+    product_type: product.product_type,
+    status: product.status,
+    tags: product.tags,
+  };
+
+  return {
+    source:           "shopify",
+    entityType:       "inventory",
+    occurredAt:       new Date(variant.updated_at ?? product.updated_at ?? product.created_at),
+    amountInr:        quantityAvailable * costPerItem,
+    currencyOriginal: "INR",
+    fxRateUsed:       1,
+    rawId:            `inventory:${variant.id}`,
+    rawPayload:       {
+      product,
+      variant,
+      inventory_item: inventoryItem ?? null,
+    } as unknown as Record<string, unknown>,
+    dimensions,
+  };
+}
+
 export function normalizeShopifyCustomer(
   customer: ShopifyCustomer,
   fxRate: number = config.DEFAULT_FX_RATE_USD_INR,
@@ -258,7 +327,7 @@ export class ShopifyConnector implements BaseConnector {
   schema(): ConnectorSchema {
     return {
       source:       "shopify",
-      entityTypes:  ["order", "product", "customer"],
+      entityTypes:  ["order", "product", "customer", "inventory"],
       dimensionKeys: [
         "order_name",
         "financial_status",
@@ -280,10 +349,16 @@ export class ShopifyConnector implements BaseConnector {
         "skus",
         "item_count",
         "customer_id",
+        "quantity_available",
+        "cost_per_item",
+        "cost_source",
+        "price",
+        "variant_id",
+        "inventory_item_id",
       ],
       description:
-        "Shopify e-commerce data (orders, products, customers). Each row is one entity with INR amount, " +
-        "geo, tags, and relevant state.",
+        "Shopify e-commerce data (orders, products, customers, inventory). Each row is one entity with INR amount, " +
+        "geo, tags, inventory quantity, cost, and relevant state.",
     };
   }
 
@@ -295,8 +370,8 @@ export class ShopifyConnector implements BaseConnector {
   ): Promise<NormalizedFact[]> {
     this.assertAuthenticated();
 
-    if (!["order", "product", "customer"].includes(entity)) {
-      throw new Error(`ShopifyConnector: unsupported entity "${entity}". Use "order", "product", or "customer".`);
+    if (!["order", "product", "customer", "inventory"].includes(entity)) {
+      throw new Error(`ShopifyConnector: unsupported entity "${entity}". Use "order", "product", "customer", or "inventory".`);
     }
 
     const params = new URLSearchParams();
@@ -310,7 +385,8 @@ export class ShopifyConnector implements BaseConnector {
     if (filters.dateTo)   params.set("created_at_max", filters.dateTo.toISOString());
     if (filters.sinceId)  params.set("since_id", filters.sinceId);
 
-    const url = `${this.baseUrl}/${entity}s.json?${params.toString()}`;
+    const endpoint = entity === "inventory" ? "products" : `${entity}s`;
+    const url = `${this.baseUrl}/${endpoint}.json?${params.toString()}`;
 
     console.log(`[shopify] GET ${url}`);
 
@@ -332,6 +408,27 @@ export class ShopifyConnector implements BaseConnector {
       const items: ShopifyProduct[] = body.products ?? [];
       console.log(`[shopify] fetched ${items.length} products`);
       return items.map((p) => normalizeShopifyProduct(p));
+    } else if (entity === "inventory") {
+      const items: ShopifyProduct[] = body.products ?? [];
+      const inventoryItems = await this.fetchInventoryItems(items);
+      const inventoryLevels = await this.fetchInventoryLevels(items);
+      console.log(`[shopify] fetched ${items.length} products for inventory`);
+      return items.flatMap((p) =>
+        (p.variants ?? []).map((v) => {
+          const available = v.inventory_item_id
+            ? inventoryLevels.get(v.inventory_item_id)
+            : undefined;
+
+          return normalizeShopifyInventory(
+            p,
+            {
+              ...v,
+              inventory_quantity: available ?? v.inventory_quantity,
+            },
+            v.inventory_item_id ? inventoryItems.get(v.inventory_item_id) : undefined,
+          );
+        }),
+      );
     } else {
       const items: ShopifyCustomer[] = body.customers ?? [];
       console.log(`[shopify] fetched ${items.length} customers`);
@@ -523,6 +620,76 @@ export class ShopifyConnector implements BaseConnector {
       "X-Shopify-Access-Token": this.accessToken,
       "Content-Type":           "application/json",
     };
+  }
+
+  private async fetchInventoryItems(
+    products: ShopifyProduct[],
+  ): Promise<Map<number, ShopifyInventoryItem>> {
+    const ids = products
+      .flatMap((p) => p.variants ?? [])
+      .map((v) => v.inventory_item_id)
+      .filter((id): id is number => typeof id === "number");
+
+    const uniqueIds = [...new Set(ids)];
+    const byId = new Map<number, ShopifyInventoryItem>();
+    const CHUNK = 50;
+
+    for (let i = 0; i < uniqueIds.length; i += CHUNK) {
+      const chunk = uniqueIds.slice(i, i + CHUNK);
+      const url = `${this.baseUrl}/inventory_items.json?ids=${chunk.join(",")}`;
+
+      const res = await fetch(url, { headers: this.headers() });
+      if (!res.ok) {
+        console.warn(
+          `[shopify] inventory_items fetch skipped - ${res.status} ${res.statusText}. ` +
+          "Dead-stock costs will fall back to estimated cost from variant price.",
+        );
+        continue;
+      }
+
+      const body = (await res.json()) as { inventory_items?: ShopifyInventoryItem[] };
+      for (const item of body.inventory_items ?? []) {
+        byId.set(item.id, item);
+      }
+    }
+
+    return byId;
+  }
+
+  private async fetchInventoryLevels(
+    products: ShopifyProduct[],
+  ): Promise<Map<number, number>> {
+    const ids = products
+      .flatMap((p) => p.variants ?? [])
+      .map((v) => v.inventory_item_id)
+      .filter((id): id is number => typeof id === "number");
+
+    const uniqueIds = [...new Set(ids)];
+    const byItemId = new Map<number, number>();
+    const CHUNK = 50;
+
+    for (let i = 0; i < uniqueIds.length; i += CHUNK) {
+      const chunk = uniqueIds.slice(i, i + CHUNK);
+      const url = `${this.baseUrl}/inventory_levels.json?inventory_item_ids=${chunk.join(",")}`;
+
+      const res = await fetch(url, { headers: this.headers() });
+      if (!res.ok) {
+        console.warn(
+          `[shopify] inventory_levels fetch skipped - ${res.status} ${res.statusText}. ` +
+          "Dead-stock quantities will fall back to variant inventory_quantity.",
+        );
+        continue;
+      }
+
+      const body = (await res.json()) as { inventory_levels?: ShopifyInventoryLevel[] };
+      for (const level of body.inventory_levels ?? []) {
+        if (typeof level.available === "number") {
+          byItemId.set(level.inventory_item_id, level.available);
+        }
+      }
+    }
+
+    return byItemId;
   }
 
   private assertAuthenticated(): void {

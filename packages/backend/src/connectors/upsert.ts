@@ -1,6 +1,7 @@
 // ── Drizzle upsert for NormalizedFact[] → facts table ────────────────────────
-// Uses onConflictDoNothing() against the (source, raw_id) unique index so
-// re-running a sync is fully idempotent.
+// Uses the (source, raw_id) unique index so re-running a sync is idempotent.
+// Existing rows are refreshed, which is important for inventory snapshots where
+// stock and cost change over time.
 //
 // Provenance columns logged on every row:
 //   fetched_at        — set by DB default (now()), always accurate
@@ -9,6 +10,7 @@
 import { db } from "../db";
 import { facts } from "../db/schema";
 import { NormalizedFact } from "./base";
+import { sql } from "drizzle-orm";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -74,9 +76,23 @@ export async function upsertFacts(
     await db
       .insert(facts)
       .values(chunk)
-      .onConflictDoNothing(); // dedup key: ix_facts_source_raw_id (source, raw_id)
+      .onConflictDoUpdate({
+        target: [facts.source, facts.rawId],
+        set: {
+          merchantId:       sql`excluded.merchant_id`,
+          entityType:       sql`excluded.entity_type`,
+          connectorVersion: sql`excluded.connector_version`,
+          fetchedAt:        sql`now()`,
+          occurredAt:       sql`excluded.occurred_at`,
+          amountInr:        sql`excluded.amount_inr`,
+          currencyOriginal: sql`excluded.currency_original`,
+          fxRateUsed:       sql`excluded.fx_rate_used`,
+          dimensions:       sql`excluded.dimensions`,
+          rawPayload:       sql`excluded.raw_payload`,
+        },
+      }); // dedup key: ix_facts_source_raw_id (source, raw_id)
 
-    // Drizzle's onConflictDoNothing doesn't return a count in all drivers,
+    // Drizzle's upsert doesn't return a count in all drivers,
     // so we conservatively track attempted and compute delta later if needed.
     totalInserted += chunk.length;
   }

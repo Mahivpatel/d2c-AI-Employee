@@ -7,7 +7,11 @@ export function useMetrics(merchantId: string | null, periodDays: number) {
   const [error, setError]     = useState<string | null>(null);
 
   const fetch = useCallback(async () => {
-    if (!merchantId) return;
+    if (!merchantId) {
+      setData(null);
+      return;
+    }
+    setData(null);
     setLoading(true);
     setError(null);
     try {

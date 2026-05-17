@@ -2,10 +2,17 @@
 
 export interface SkuSalesSummary {
   sku: string;
+  productTitle?: string | null;
+  productType?: string | null;
+  vendor?: string | null;
+  tags?: string | null;
+  price?: number;
+  costSource?: string | null;
   currentStock: number;
   costPerItem: number;
   capitalLockedInr: number;
   unitsSoldInPeriod: number;
+  revenueInPeriod?: number;
   lastSaleAt: string | null;
   daysSinceLastSale: number;
 }

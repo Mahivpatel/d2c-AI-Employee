@@ -62,11 +62,12 @@ export const submitProposalsTool: Groq.Chat.ChatCompletionTool = {
       properties: {
         reasoning: {
           type: 'string',
-          description:
-            'Full reasoning chain — explain how you evaluated each SKU',
+          description: 'Brief summary of the evaluation, max 500 characters',
+          maxLength: 500,
         },
         proposals: {
           type: 'array',
+          maxItems: 5,
           items: {
             type: 'object',
             properties: {
@@ -90,9 +91,16 @@ export const submitProposalsTool: Groq.Chat.ChatCompletionTool = {
                 ],
               },
               estimatedSavingInr: { type: 'number' },
-              reasoning: { type: 'string' },
+              reasoning: {
+                type: 'string',
+                description: 'Concise reason, max 160 characters',
+                maxLength: 160,
+              },
               confidence: { type: 'number' },
-              uncertaintyNote: { type: 'string' },
+              uncertaintyNote: {
+                type: 'string',
+                maxLength: 160,
+              },
             },
             required: [
               'actionType',

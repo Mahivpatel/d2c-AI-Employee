@@ -43,63 +43,109 @@ async function fetchSkuSummaries(
   merchantId: string,
   lookbackDays: number
 ): Promise<SkuSalesSummary[]> {
-  // Aggregate sales from order facts
-  // Use an implicit lateral join to expand line_items BEFORE aggregating.
-  // jsonb_array_elements is a set-returning function and cannot be nested
-  // inside SUM() / MAX() — Postgres raises "aggregate function calls cannot
-  // contain set-returning function calls" if you try.
+  // Aggregate sales from real Shopify order payloads. The COALESCE fallback
+  // keeps old local seed data working because that seed stored line_items in
+  // dimensions before the Shopify connector was the source of truth.
   const salesResult = await db.execute(sql`
     SELECT
-      li->>'sku'            AS sku,
-      SUM((li->>'quantity')::int) AS units_sold,
-      MAX(f.occurred_at)   AS last_sale_at
+      COALESCE(NULLIF(li->>'sku', ''), li->>'title') AS sku,
+      MAX(li->>'title') AS product_title,
+      SUM(
+        CASE
+          WHEN f.occurred_at >= NOW() - (${lookbackDays} || ' days')::interval
+          THEN COALESCE((li->>'quantity')::numeric, 0)
+          ELSE 0
+        END
+      ) AS units_sold_in_period,
+      SUM(
+        CASE
+          WHEN f.occurred_at >= NOW() - (${lookbackDays} || ' days')::interval
+          THEN COALESCE((li->>'quantity')::numeric, 0) * COALESCE((li->>'price')::numeric, 0)
+          ELSE 0
+        END
+      ) AS revenue_in_period,
+      MAX(f.occurred_at) AS last_sale_at
     FROM facts f,
-         jsonb_array_elements(f.dimensions->'line_items') AS li
+         jsonb_array_elements(
+           CASE
+             WHEN jsonb_typeof(f.raw_payload->'line_items') = 'array'
+               THEN f.raw_payload->'line_items'
+             WHEN jsonb_typeof(f.dimensions->'line_items') = 'array'
+               THEN f.dimensions->'line_items'
+             ELSE '[]'::jsonb
+           END
+         ) AS li
     WHERE
       f.merchant_id  = ${merchantId}::uuid
+      AND f.source = 'shopify'
       AND f.entity_type = 'order'
-      AND f.occurred_at >= NOW() - (${lookbackDays} || ' days')::interval
-    GROUP BY li->>'sku'
+      AND COALESCE(NULLIF(li->>'sku', ''), li->>'title') IS NOT NULL
+    GROUP BY COALESCE(NULLIF(li->>'sku', ''), li->>'title')
   `);
 
-  // Latest inventory snapshot per SKU
+  // Latest real Shopify inventory snapshot per SKU. These rows are produced by
+  // POST /api/sync with entity="inventory".
   const inventoryResult = await db.execute(sql`
     SELECT DISTINCT ON (dimensions->>'sku')
       dimensions->>'sku'                         AS sku,
+      dimensions->>'product_title'               AS product_title,
+      dimensions->>'product_type'                AS product_type,
+      dimensions->>'vendor'                      AS vendor,
+      dimensions->>'tags'                        AS tags,
+      (dimensions->>'price')::float              AS price,
       (dimensions->>'quantity_available')::int   AS current_stock,
-      (dimensions->>'cost_per_item')::float      AS cost_per_item
+      (dimensions->>'cost_per_item')::float      AS cost_per_item,
+      dimensions->>'cost_source'                 AS cost_source
     FROM facts
     WHERE
       merchant_id  = ${merchantId}::uuid
+      AND source = 'shopify'
       AND entity_type = 'inventory'
+      AND dimensions->>'sku' IS NOT NULL
     ORDER BY dimensions->>'sku', occurred_at DESC
   `);
 
   const salesRows = salesResult.rows as Array<{
     sku: string;
-    units_sold: string;
+    product_title: string | null;
+    units_sold_in_period: string;
+    revenue_in_period: string;
     last_sale_at: string | null;
   }>;
   const inventoryRows = inventoryResult.rows as Array<{
     sku: string;
+    product_title: string | null;
+    product_type: string | null;
+    vendor: string | null;
+    tags: string | null;
+    price: string | number | null;
     current_stock: string;
     cost_per_item: string;
+    cost_source: string | null;
   }>;
 
   return inventoryRows.map((inv) => {
     const sale = salesRows.find((s) => s.sku === inv.sku);
     const currentStock = parseInt(inv.current_stock ?? '0', 10);
     const costPerItem = parseFloat(inv.cost_per_item ?? '0');
+    const lastSaleAt = sale?.last_sale_at ?? null;
 
     return {
       sku: inv.sku,
+      productTitle: inv.product_title ?? sale?.product_title ?? null,
+      productType: inv.product_type,
+      vendor: inv.vendor,
+      tags: inv.tags,
+      price: inv.price == null ? undefined : Number(inv.price),
+      costSource: inv.cost_source,
       currentStock,
       costPerItem,
       capitalLockedInr: currentStock * costPerItem,
-      unitsSoldInPeriod: sale ? parseInt(sale.units_sold, 10) : 0,
-      lastSaleAt: sale?.last_sale_at ?? null,
-      daysSinceLastSale: sale?.last_sale_at
-        ? differenceInDays(new Date(), new Date(sale.last_sale_at))
+      unitsSoldInPeriod: sale ? parseInt(sale.units_sold_in_period ?? '0', 10) : 0,
+      revenueInPeriod: sale ? Number(sale.revenue_in_period ?? 0) : 0,
+      lastSaleAt,
+      daysSinceLastSale: lastSaleAt
+        ? differenceInDays(new Date(), new Date(lastSaleAt))
         : lookbackDays,
     };
   });
@@ -147,6 +193,97 @@ async function fetchMerchantContext(
 // ── Groq reasoning loop ────────────────────────────────────────────────────────
 
 const MAX_TOOL_ROUNDS = 8; // guard against infinite loops
+const MAX_SKUS_FOR_LLM = 12;
+const MAX_PROPOSALS_FOR_LLM = 5;
+const MAX_COMPLETION_TOKENS = 1800;
+
+function rankDeadStockCandidates(a: SkuSalesSummary, b: SkuSalesSummary): number {
+  const aNoSales = a.unitsSoldInPeriod === 0 ? 1 : 0;
+  const bNoSales = b.unitsSoldInPeriod === 0 ? 1 : 0;
+  if (aNoSales !== bNoSales) return bNoSales - aNoSales;
+
+  if (a.daysSinceLastSale !== b.daysSinceLastSale) {
+    return b.daysSinceLastSale - a.daysSinceLastSale;
+  }
+
+  return b.capitalLockedInr - a.capitalLockedInr;
+}
+
+function compactSkuSummary(s: SkuSalesSummary) {
+  return {
+    sku: s.sku,
+    title: s.productTitle,
+    category: s.productType,
+    stock: s.currentStock,
+    cost: Math.round(s.costPerItem),
+    costSource: s.costSource,
+    capital: Math.round(s.capitalLockedInr),
+    sold: s.unitsSoldInPeriod,
+    revenue: Math.round(s.revenueInPeriod ?? 0),
+    lastSaleAt: s.lastSaleAt,
+    daysSinceLastSale: s.daysSinceLastSale,
+  };
+}
+
+function chooseFallbackAction(s: SkuSalesSummary, lookbackDays: number): DeadStockProposal['actionType'] {
+  if (s.unitsSoldInPeriod === 0 && s.daysSinceLastSale >= lookbackDays * 2) {
+    return 'flag_liquidation';
+  }
+
+  if (s.unitsSoldInPeriod > 0 && s.currentStock > s.unitsSoldInPeriod * 4) {
+    return 'create_bundle';
+  }
+
+  return 'apply_discount';
+}
+
+function buildFallbackProposals(
+  skuSummaries: SkuSalesSummary[],
+  context: MerchantContext,
+  lookbackDays: number,
+): { proposals: DeadStockProposal[]; reasoningChain: string; messages: Groq.Chat.ChatCompletionMessageParam[] } {
+  const proposals = skuSummaries
+    .slice()
+    .sort(rankDeadStockCandidates)
+    .slice(0, MAX_PROPOSALS_FOR_LLM)
+    .map((s) => {
+      const holdingCost30d = Math.round(s.currentStock * context.warehouseCostPerUnitPerDay * 30);
+      const actionType = chooseFallbackAction(s, lookbackDays);
+      const costNote = s.costSource === 'estimated_from_price'
+        ? ' Cost is estimated.'
+        : '';
+
+      return {
+        actionType,
+        target: {
+          sku: s.sku,
+          currentStock: s.currentStock,
+          capitalLockedInr: Math.round(s.capitalLockedInr),
+          daysSinceLastSale: s.daysSinceLastSale,
+        },
+        estimatedSavingInr: holdingCost30d,
+        reasoning:
+          `${s.currentStock} units, ${s.unitsSoldInPeriod} sold in ${lookbackDays}d, ` +
+          `${s.daysSinceLastSale}d since last sale.${costNote}`,
+        confidence: s.costSource === 'estimated_from_price' ? 0.72 : 0.82,
+        uncertaintyNote: s.costSource === 'estimated_from_price'
+          ? 'Cost is estimated from Shopify variant price.'
+          : undefined,
+      };
+    });
+
+  return {
+    proposals,
+    reasoningChain:
+      `Fallback rules used after LLM tool-call failure. Ranked by no recent sales, days since last sale, and capital locked. Generated ${proposals.length} proposals.`,
+    messages: [
+      {
+        role: 'assistant',
+        content: 'Fallback proposal generator used; no LLM message history available.',
+      },
+    ],
+  };
+}
 
 async function runLLMReasoning(
   skuSummaries: SkuSalesSummary[],
@@ -154,14 +291,28 @@ async function runLLMReasoning(
   merchantId: string,
   lookbackDays: number
 ): Promise<{ proposals: DeadStockProposal[]; reasoningChain: string; messages: Groq.Chat.ChatCompletionMessageParam[] }> {
+  const llmSkuSummaries = skuSummaries
+    .slice()
+    .sort(rankDeadStockCandidates)
+    .slice(0, MAX_SKUS_FOR_LLM)
+    .map(compactSkuSummary);
+
   const systemPrompt = `You are an inventory analyst for a D2C brand in India.
 Your job is to identify SKUs that represent a genuine capital problem and propose one concrete action per SKU.
+
+The SKU table is computed from real Shopify data:
+- currentStock, costPerItem, and capitalLockedInr come from the latest Shopify inventory snapshot
+- unitsSoldInPeriod, revenueInPeriod, and lastSaleAt come from Shopify order line_items
+- costSource tells you whether cost came from Shopify or an estimate from variant price
 
 Rules:
 - Do NOT flag SKUs just because they are slow movers
 - Consider seasonality before flagging — use get_category_seasonality if uncertain
 - Use get_sku_detail to drill into any SKU you want more history on
 - Every proposal must reference specific data points from the SKU summaries
+- Lower confidence and add uncertaintyNote when costSource is estimated_from_price
+- Submit at most ${MAX_PROPOSALS_FOR_LLM} proposals; choose the highest capital risk SKUs
+- Keep each proposal reasoning under 160 characters
 - When done with your analysis, call submit_dead_stock_proposals with your final proposals
 - Do NOT flag SKUs where capital locked is below ₹5,000 — not worth actioning`;
 
@@ -176,10 +327,10 @@ Rules:
 - Avg order value: ₹${context.avgOrderValue.toFixed(2)}
 
 SKU inventory + sales data (last ${lookbackDays} days):
-${JSON.stringify(skuSummaries, null, 2)}
+${JSON.stringify(llmSkuSummaries)}
 
-Analyse this inventory. Use the available tools to investigate further where needed.
-When you have completed your analysis, submit your proposals via submit_dead_stock_proposals.`,
+Analyse these top ${llmSkuSummaries.length} candidates selected from ${skuSummaries.length} actionable SKUs. Submit only the ${MAX_PROPOSALS_FOR_LLM} strongest actions.
+When done, call submit_dead_stock_proposals with concise JSON.`,
     },
   ];
 
@@ -197,7 +348,7 @@ When you have completed your analysis, submit your proposals via submit_dead_sto
       tools: [skuDetailTool, seasonalityTool, submitProposalsTool],
       tool_choice: 'auto',
       temperature: 0.2,
-      max_tokens: 4096,
+      max_tokens: MAX_COMPLETION_TOKENS,
     });
 
     const message = response.choices[0].message;
@@ -244,7 +395,7 @@ When you have completed your analysis, submit your proposals via submit_dead_sto
 
         case 'submit_dead_stock_proposals': {
           // Terminal tool — capture and exit immediately
-          proposals = args.proposals ?? [];
+          proposals = (args.proposals ?? []).slice(0, MAX_PROPOSALS_FOR_LLM);
           reasoningChain = args.reasoning ?? '';
           console.log(
             `[DeadStockAgent] Proposals submitted — ${proposals.length} SKUs flagged`
@@ -376,12 +527,26 @@ export async function runDeadStockAgent(
     return { proposalsCount: 0, skusAnalyzed: skuSummaries.length };
   }
 
-  const { proposals, reasoningChain, messages } = await runLLMReasoning(
-    actionableSummaries,
-    context,
-    merchantId,
-    lookbackDays
-  );
+  let proposals: DeadStockProposal[];
+  let reasoningChain: string;
+  let messages: Groq.Chat.ChatCompletionMessageParam[];
+
+  try {
+    ({ proposals, reasoningChain, messages } = await runLLMReasoning(
+      actionableSummaries,
+      context,
+      merchantId,
+      lookbackDays
+    ));
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.warn('[DeadStockAgent] LLM reasoning failed; using fallback proposals:', message);
+    ({ proposals, reasoningChain, messages } = buildFallbackProposals(
+      actionableSummaries,
+      context,
+      lookbackDays
+    ));
+  }
 
   await writeRunLog(
     merchantId,

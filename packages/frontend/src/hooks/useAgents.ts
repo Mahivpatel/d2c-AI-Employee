@@ -7,7 +7,11 @@ export function useAgents(merchantId: string | null) {
   const [error, setError]     = useState<string | null>(null);
 
   const fetch = useCallback(async () => {
-    if (!merchantId) return;
+    if (!merchantId) {
+      setRuns([]);
+      return;
+    }
+    setRuns([]);
     setLoading(true);
     setError(null);
     try {

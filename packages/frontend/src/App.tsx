@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { BottomTabNav, DesktopSidebar } from './components/BottomTabNav';
+import { BottomTabNav, DesktopSidebar, MerchantSelector } from './components/BottomTabNav';
 import MetricsDashboard from './pages/MetricsDashboard';
 import ChatView         from './pages/ChatView';
 import AgentInbox       from './pages/AgentInbox';
@@ -31,7 +31,11 @@ export default function App() {
   return (
     <div className="flex h-[100dvh] overflow-hidden">
       {/* Desktop sidebar */}
-      <DesktopSidebar merchant={merchant ?? undefined} />
+      <DesktopSidebar
+        merchants={merchants}
+        merchantId={mid}
+        onMerchantChange={handleMerchantChange}
+      />
 
       {/* Main content area */}
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
@@ -42,12 +46,18 @@ export default function App() {
           </div>
         )}
 
-        {/* Merchant name banner on mobile */}
-        {merchant && (
-          <div className="sm:hidden flex items-center px-4 py-2.5 border-b border-surface-border bg-surface-card/80 shrink-0">
-            <span className="text-xs text-slate-400">
-              Store: <span className="text-slate-200 font-medium">{merchant.name}</span>
-            </span>
+        {/* Merchant selector on mobile */}
+        {(merchant || merchants.length > 0) && (
+          <div className="sm:hidden flex items-center gap-3 px-4 py-2.5 border-b border-surface-border bg-surface-card/80 shrink-0">
+            <span className="text-xs text-slate-400 shrink-0">Store</span>
+            <div className="flex-1 min-w-0">
+              <MerchantSelector
+                merchants={merchants}
+                merchantId={mid}
+                onMerchantChange={handleMerchantChange}
+                compact
+              />
+            </div>
           </div>
         )}
 
