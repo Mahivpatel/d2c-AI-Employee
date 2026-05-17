@@ -13,9 +13,15 @@ Two things matter equally: how well you build, and what you choose to build. Her
 ### Why these three connectors?
 A D2C business runs on three pillars: **Sell**, **Acquire**, and **Deliver**.
 1. **Shopify (Sell)**: The absolute source of truth for revenue, orders, and products.
+   Amazon was also an option but chose shopify over it For a D2C (Direct-to-Consumer) product, Shopify represents the brand's independent website, while Amazon is a third-party marketplace also True D2C relies on controlling the end-to-end brand experience. Shopify is the nucleus of this ecosystem.
 2. **Meta Ads (Acquire)**: The primary driver of CAC and marketing spend.
+   google ads was also an option but chose meta ads because For 90% of D2C brands, Meta is where the majority of their acquisition budget is burned, making it the most critical platform for an AI to monitor.
 3. **Shiprocket (Deliver)**: The ground reality of fulfillment, RTOs (Return to Origin), and logistics costs.
 By stitching these three, I can answer the multi-hop questions founders actually care about: *"Did the CAC spike on Meta Ads correlate with higher RTO rates on Shiprocket for the new summer collection?"*
+   Delhivery was also an option but chose shiprocket because Delhivery is a single logistics provider. Shiprocket is an aggregator. D2C brands rarely rely on one courier; they use Shiprocket to route shipments automatically between Delhivery, BlueDart, Ecom Express, and Xpressbees based on which courier has the best delivery rate for a specific pincode.
+
+   ![alt text](<WhatsApp Image 2026-05-17 at 10.25.43 PM (1).jpeg>)
+   ![alt text](<WhatsApp Image 2026-05-17 at 10.25.43 PM.jpeg>)
 
 ### Why this schema?
 I chose a **Universal Data Model** with strict provenance over just dumping raw JSON into a data lake. Why? Because an AI employee is only as trustworthy as its data. By normalizing orders, ad spend, and fulfillment into standard tables with `source_system` and `raw_payload_ref` on *every single row*, I guarantee that every number the AI outputs can be traced back to the exact API webhook that generated it.
