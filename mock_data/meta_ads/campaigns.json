@@ -1,0 +1,38 @@
+[
+  {
+    "id": "23851234567890",
+    "name": "KURTA-SS25-Acquisition",
+    "status": "ACTIVE",
+    "objective": "OUTCOME_SALES",
+    "daily_budget": "150000",
+    "lifetime_budget": null,
+    "start_time": "2025-04-01T00:00:00+0530",
+    "stop_time": null,
+    "account_id": "act_987654321",
+    "created_time": "2025-03-28T11:22:00+0530"
+  },
+  {
+    "id": "23851234567891",
+    "name": "LINEN-SETS-Retargeting",
+    "status": "ACTIVE",
+    "objective": "OUTCOME_SALES",
+    "daily_budget": "80000",
+    "lifetime_budget": null,
+    "start_time": "2025-04-10T00:00:00+0530",
+    "stop_time": null,
+    "account_id": "act_987654321",
+    "created_time": "2025-04-08T09:00:00+0530"
+  },
+  {
+    "id": "23851234567892",
+    "name": "CLEARANCE-SALE-Broad",
+    "status": "PAUSED",
+    "objective": "OUTCOME_SALES",
+    "daily_budget": "50000",
+    "lifetime_budget": null,
+    "start_time": "2025-03-15T00:00:00+0530",
+    "stop_time": "2025-04-15T23:59:59+0530",
+    "account_id": "act_987654321",
+    "created_time": "2025-03-12T14:30:00+0530"
+  }
+]

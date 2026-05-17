@@ -1,0 +1,44 @@
+[
+  {
+    "id": "23852222200001",
+    "ad_set_id": "23851111100001",
+    "campaign_id": "23851234567890",
+    "name": "KURTA-L-RED-Carousel-v3",
+    "status": "ACTIVE",
+    "creative": {
+      "id": "23859999900001",
+      "format": "CAROUSEL",
+      "call_to_action": "SHOP_NOW",
+      "destination_url": "https://yourstore.com/products/kurta-l-red"
+    },
+    "created_time": "2025-03-29T10:00:00+0530"
+  },
+  {
+    "id": "23852222200002",
+    "ad_set_id": "23851111100002",
+    "campaign_id": "23851234567890",
+    "name": "KURTA-L-RED-Video-v1",
+    "status": "ACTIVE",
+    "creative": {
+      "id": "23859999900002",
+      "format": "VIDEO",
+      "call_to_action": "SHOP_NOW",
+      "destination_url": "https://yourstore.com/products/kurta-l-red"
+    },
+    "created_time": "2025-04-01T09:00:00+0530"
+  },
+  {
+    "id": "23852222200003",
+    "ad_set_id": "23851111100003",
+    "campaign_id": "23851234567891",
+    "name": "LINEN-SET-DPA-v2",
+    "status": "ACTIVE",
+    "creative": {
+      "id": "23859999900003",
+      "format": "DPA",
+      "call_to_action": "SHOP_NOW",
+      "destination_url": "https://yourstore.com/collections/linen"
+    },
+    "created_time": "2025-04-10T10:00:00+0530"
+  }
+]

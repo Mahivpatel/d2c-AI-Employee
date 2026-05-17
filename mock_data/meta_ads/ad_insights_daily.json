@@ -1,0 +1,6203 @@
+[
+  {
+    "date_start": "2025-04-01",
+    "date_stop": "2025-04-01",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4324.5",
+    "impressions": "33212",
+    "reach": "30555",
+    "clicks": "986",
+    "unique_clicks": "946",
+    "ctr": "2.97",
+    "cpc": "4.39",
+    "cpm": "130.21",
+    "frequency": "1.06",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.04"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "986"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "69"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "29"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "13146.48"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "149.12"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-01",
+    "date_stop": "2025-04-01",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3034.63",
+    "impressions": "23488",
+    "reach": "21608",
+    "clicks": "549",
+    "unique_clicks": "527",
+    "ctr": "2.34",
+    "cpc": "5.53",
+    "cpm": "129.2",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.11"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "549"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "38"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "21"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6403.07"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "144.51"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-01",
+    "date_stop": "2025-04-01",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2324.96",
+    "impressions": "21436",
+    "reach": "19721",
+    "clicks": "750",
+    "unique_clicks": "720",
+    "ctr": "3.5",
+    "cpc": "3.1",
+    "cpm": "108.46",
+    "frequency": "1.24",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.51"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "750"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "52"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "22"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8160.61"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "105.68"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-02",
+    "date_stop": "2025-04-02",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5615.15",
+    "impressions": "52108",
+    "reach": "47939",
+    "clicks": "1531",
+    "unique_clicks": "1469",
+    "ctr": "2.94",
+    "cpc": "3.67",
+    "cpm": "107.76",
+    "frequency": "1.1",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.26"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1531"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "107"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "45"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18305.39"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "124.78"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-02",
+    "date_stop": "2025-04-02",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3649.47",
+    "impressions": "33356",
+    "reach": "30687",
+    "clicks": "627",
+    "unique_clicks": "601",
+    "ctr": "1.88",
+    "cpc": "5.82",
+    "cpm": "109.41",
+    "frequency": "1.06",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.83"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "627"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "43"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "25"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6678.53"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "145.98"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-02",
+    "date_stop": "2025-04-02",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1779.76",
+    "impressions": "15252",
+    "reach": "14031",
+    "clicks": "570",
+    "unique_clicks": "547",
+    "ctr": "3.74",
+    "cpc": "3.12",
+    "cpm": "116.69",
+    "frequency": "1.13",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.4"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "570"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "39"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "22"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7830.94"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "80.90"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-03",
+    "date_stop": "2025-04-03",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4964.46",
+    "impressions": "44134",
+    "reach": "40603",
+    "clicks": "1359",
+    "unique_clicks": "1304",
+    "ctr": "3.08",
+    "cpc": "3.65",
+    "cpm": "112.49",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.83"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1359"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "95"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "54"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19013.88"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "91.93"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-03",
+    "date_stop": "2025-04-03",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2601.43",
+    "impressions": "20499",
+    "reach": "18859",
+    "clicks": "424",
+    "unique_clicks": "407",
+    "ctr": "2.07",
+    "cpc": "6.14",
+    "cpm": "126.91",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.05"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "424"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "29"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "12"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5332.93"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "216.79"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-03",
+    "date_stop": "2025-04-03",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2468.09",
+    "impressions": "20435",
+    "reach": "18800",
+    "clicks": "635",
+    "unique_clicks": "609",
+    "ctr": "3.11",
+    "cpc": "3.89",
+    "cpm": "120.78",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.31"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "635"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "44"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8169.38"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "129.90"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-04",
+    "date_stop": "2025-04-04",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4481.22",
+    "impressions": "41540",
+    "reach": "38216",
+    "clicks": "1370",
+    "unique_clicks": "1315",
+    "ctr": "3.3",
+    "cpc": "3.27",
+    "cpm": "107.88",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.68"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1370"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "95"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "41"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16490.89"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "109.30"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-04",
+    "date_stop": "2025-04-04",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2897.48",
+    "impressions": "23556",
+    "reach": "21671",
+    "clicks": "440",
+    "unique_clicks": "422",
+    "ctr": "1.87",
+    "cpc": "6.59",
+    "cpm": "123",
+    "frequency": "1.23",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.56"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "440"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "30"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4520.07"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "170.44"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-04",
+    "date_stop": "2025-04-04",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2469.05",
+    "impressions": "20665",
+    "reach": "19011",
+    "clicks": "746",
+    "unique_clicks": "716",
+    "ctr": "3.61",
+    "cpc": "3.31",
+    "cpm": "119.48",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.47"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "746"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "52"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "22"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8567.6"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "112.23"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-05",
+    "date_stop": "2025-04-05",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4065.36",
+    "impressions": "32482",
+    "reach": "29883",
+    "clicks": "971",
+    "unique_clicks": "932",
+    "ctr": "2.99",
+    "cpc": "4.19",
+    "cpm": "125.16",
+    "frequency": "1.09",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.19"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "971"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "67"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "38"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "12968.5"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "106.98"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-05",
+    "date_stop": "2025-04-05",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2761.85",
+    "impressions": "24552",
+    "reach": "22587",
+    "clicks": "574",
+    "unique_clicks": "551",
+    "ctr": "2.34",
+    "cpc": "4.81",
+    "cpm": "112.49",
+    "frequency": "1.22",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "574"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "22"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5523.7"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "125.54"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-05",
+    "date_stop": "2025-04-05",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2113.44",
+    "impressions": "16505",
+    "reach": "15184",
+    "clicks": "498",
+    "unique_clicks": "478",
+    "ctr": "3.02",
+    "cpc": "4.24",
+    "cpm": "128.05",
+    "frequency": "1.25",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.35"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "498"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "34"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9193.46"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "150.96"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-06",
+    "date_stop": "2025-04-06",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4657.85",
+    "impressions": "41874",
+    "reach": "38524",
+    "clicks": "1189",
+    "unique_clicks": "1141",
+    "ctr": "2.84",
+    "cpc": "3.92",
+    "cpm": "111.23",
+    "frequency": "1.22",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.66"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1189"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "83"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "35"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "12389.88"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "133.08"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-06",
+    "date_stop": "2025-04-06",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3693.63",
+    "impressions": "33612",
+    "reach": "30923",
+    "clicks": "635",
+    "unique_clicks": "609",
+    "ctr": "1.89",
+    "cpc": "5.82",
+    "cpm": "109.89",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.69"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "635"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "44"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6242.23"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "194.40"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-06",
+    "date_stop": "2025-04-06",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2500.05",
+    "impressions": "23325",
+    "reach": "21459",
+    "clicks": "720",
+    "unique_clicks": "691",
+    "ctr": "3.09",
+    "cpc": "3.47",
+    "cpm": "107.18",
+    "frequency": "1.1",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.15"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "720"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "50"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "21"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "10375.21"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "119.05"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-07",
+    "date_stop": "2025-04-07",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4615.42",
+    "impressions": "34707",
+    "reach": "31930",
+    "clicks": "1051",
+    "unique_clicks": "1008",
+    "ctr": "3.03",
+    "cpc": "4.39",
+    "cpm": "132.98",
+    "frequency": "1.1",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.17"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1051"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "73"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "31"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14630.88"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "148.88"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-07",
+    "date_stop": "2025-04-07",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3215.92",
+    "impressions": "28621",
+    "reach": "26331",
+    "clicks": "609",
+    "unique_clicks": "584",
+    "ctr": "2.13",
+    "cpc": "5.28",
+    "cpm": "112.36",
+    "frequency": "1.13",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.65"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "609"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "42"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5306.27"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "178.66"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-07",
+    "date_stop": "2025-04-07",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2128.12",
+    "impressions": "19940",
+    "reach": "18344",
+    "clicks": "624",
+    "unique_clicks": "599",
+    "ctr": "3.13",
+    "cpc": "3.41",
+    "cpm": "106.73",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.84"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "624"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "43"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "24"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "10300.1"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "88.67"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-08",
+    "date_stop": "2025-04-08",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5615.71",
+    "impressions": "42398",
+    "reach": "39006",
+    "clicks": "1140",
+    "unique_clicks": "1094",
+    "ctr": "2.69",
+    "cpc": "4.93",
+    "cpm": "132.45",
+    "frequency": "1.24",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.2"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1140"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "79"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "34"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17970.27"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "165.17"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-08",
+    "date_stop": "2025-04-08",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3695.1",
+    "impressions": "32960",
+    "reach": "30323",
+    "clicks": "758",
+    "unique_clicks": "727",
+    "ctr": "2.3",
+    "cpc": "4.87",
+    "cpm": "112.11",
+    "frequency": "1.19",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.9"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "758"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "53"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "22"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7020.69"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "167.96"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-08",
+    "date_stop": "2025-04-08",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1803.73",
+    "impressions": "14754",
+    "reach": "13573",
+    "clicks": "495",
+    "unique_clicks": "475",
+    "ctr": "3.36",
+    "cpc": "3.64",
+    "cpm": "122.25",
+    "frequency": "1.06",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.87"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "495"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "34"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8784.17"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "94.93"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-09",
+    "date_stop": "2025-04-09",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4945.3",
+    "impressions": "40106",
+    "reach": "36897",
+    "clicks": "1215",
+    "unique_clicks": "1166",
+    "ctr": "3.03",
+    "cpc": "4.07",
+    "cpm": "123.31",
+    "frequency": "1.1",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.16"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1215"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "85"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "48"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15627.15"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "103.03"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-09",
+    "date_stop": "2025-04-09",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3374.18",
+    "impressions": "28714",
+    "reach": "26416",
+    "clicks": "519",
+    "unique_clicks": "498",
+    "ctr": "1.81",
+    "cpc": "6.5",
+    "cpm": "117.51",
+    "frequency": "1.23",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.02"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "519"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "36"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "20"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6815.84"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "168.71"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-09",
+    "date_stop": "2025-04-09",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2409.98",
+    "impressions": "20653",
+    "reach": "19000",
+    "clicks": "807",
+    "unique_clicks": "774",
+    "ctr": "3.91",
+    "cpc": "2.99",
+    "cpm": "116.69",
+    "frequency": "1.21",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.3"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "807"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "56"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "32"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "10362.91"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "75.31"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-10",
+    "date_stop": "2025-04-10",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "3944.8",
+    "impressions": "33885",
+    "reach": "31174",
+    "clicks": "1016",
+    "unique_clicks": "975",
+    "ctr": "3",
+    "cpc": "3.88",
+    "cpm": "116.42",
+    "frequency": "1.05",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.52"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1016"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "71"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "30"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "13885.7"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "131.49"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-10",
+    "date_stop": "2025-04-10",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3646.21",
+    "impressions": "30628",
+    "reach": "28177",
+    "clicks": "615",
+    "unique_clicks": "590",
+    "ctr": "2.01",
+    "cpc": "5.93",
+    "cpm": "119.05",
+    "frequency": "1.06",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.9"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "615"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "43"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6927.8"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "202.57"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-10",
+    "date_stop": "2025-04-10",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2118.61",
+    "impressions": "18389",
+    "reach": "16917",
+    "clicks": "544",
+    "unique_clicks": "522",
+    "ctr": "2.96",
+    "cpc": "3.89",
+    "cpm": "115.21",
+    "frequency": "1.1",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.46"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "544"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "38"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7330.39"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "132.41"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-11",
+    "date_stop": "2025-04-11",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4382.31",
+    "impressions": "37775",
+    "reach": "34753",
+    "clicks": "1072",
+    "unique_clicks": "1029",
+    "ctr": "2.84",
+    "cpc": "4.09",
+    "cpm": "116.01",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.42"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1072"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "75"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "42"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14987.5"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "104.34"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-11",
+    "date_stop": "2025-04-11",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2928.11",
+    "impressions": "26060",
+    "reach": "23975",
+    "clicks": "510",
+    "unique_clicks": "489",
+    "ctr": "1.96",
+    "cpc": "5.74",
+    "cpm": "112.36",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.13"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "510"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "35"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "20"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6236.87"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "146.41"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-11",
+    "date_stop": "2025-04-11",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2336.7",
+    "impressions": "21030",
+    "reach": "19347",
+    "clicks": "733",
+    "unique_clicks": "703",
+    "ctr": "3.49",
+    "cpc": "3.19",
+    "cpm": "111.11",
+    "frequency": "1.1",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.52"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "733"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "51"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "21"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8225.18"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "111.27"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-12",
+    "date_stop": "2025-04-12",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4038.25",
+    "impressions": "33032",
+    "reach": "30389",
+    "clicks": "941",
+    "unique_clicks": "903",
+    "ctr": "2.85",
+    "cpc": "4.29",
+    "cpm": "122.25",
+    "frequency": "1.22",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.38"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "941"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "65"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "37"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "13649.28"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "109.14"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-12",
+    "date_stop": "2025-04-12",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2841.65",
+    "impressions": "25262",
+    "reach": "23241",
+    "clicks": "517",
+    "unique_clicks": "496",
+    "ctr": "2.05",
+    "cpc": "5.5",
+    "cpm": "112.49",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.02"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "517"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "36"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5740.13"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "189.44"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-12",
+    "date_stop": "2025-04-12",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2423.2",
+    "impressions": "21493",
+    "reach": "19773",
+    "clicks": "681",
+    "unique_clicks": "653",
+    "ctr": "3.17",
+    "cpc": "3.56",
+    "cpm": "112.74",
+    "frequency": "1.21",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.86"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "681"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "47"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "27"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "11776.75"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "89.75"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-13",
+    "date_stop": "2025-04-13",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5531.42",
+    "impressions": "43255",
+    "reach": "39794",
+    "clicks": "1288",
+    "unique_clicks": "1236",
+    "ctr": "2.98",
+    "cpc": "4.29",
+    "cpm": "127.88",
+    "frequency": "1.05",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.45"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1288"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "90"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "38"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19083.4"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "145.56"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-13",
+    "date_stop": "2025-04-13",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3022.39",
+    "impressions": "22970",
+    "reach": "21132",
+    "clicks": "530",
+    "unique_clicks": "508",
+    "ctr": "2.31",
+    "cpc": "5.7",
+    "cpm": "131.58",
+    "frequency": "1.24",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.77"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "530"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "37"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5349.63"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "201.49"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-13",
+    "date_stop": "2025-04-13",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2350.14",
+    "impressions": "20469",
+    "reach": "18831",
+    "clicks": "616",
+    "unique_clicks": "591",
+    "ctr": "3.01",
+    "cpc": "3.82",
+    "cpm": "114.81",
+    "frequency": "1.24",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.22"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "616"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "43"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9917.59"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "130.56"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-14",
+    "date_stop": "2025-04-14",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4118.15",
+    "impressions": "32162",
+    "reach": "29589",
+    "clicks": "1022",
+    "unique_clicks": "981",
+    "ctr": "3.18",
+    "cpc": "4.03",
+    "cpm": "128.04",
+    "frequency": "1.07",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.54"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1022"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "71"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "40"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14578.25"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "102.95"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-14",
+    "date_stop": "2025-04-14",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2757.61",
+    "impressions": "25011",
+    "reach": "23010",
+    "clicks": "582",
+    "unique_clicks": "558",
+    "ctr": "2.33",
+    "cpc": "4.74",
+    "cpm": "110.26",
+    "frequency": "1.07",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.11"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "582"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "23"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5818.56"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "119.90"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-14",
+    "date_stop": "2025-04-14",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2358.13",
+    "impressions": "22072",
+    "reach": "20306",
+    "clicks": "776",
+    "unique_clicks": "744",
+    "ctr": "3.52",
+    "cpc": "3.04",
+    "cpm": "106.84",
+    "frequency": "1.2",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.74"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "776"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "54"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "23"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "11177.54"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "102.53"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-15",
+    "date_stop": "2025-04-15",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5293.23",
+    "impressions": "44410",
+    "reach": "40857",
+    "clicks": "1398",
+    "unique_clicks": "1342",
+    "ctr": "3.15",
+    "cpc": "3.79",
+    "cpm": "119.19",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.2"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1398"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "97"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "41"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16938.34"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "129.10"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-15",
+    "date_stop": "2025-04-15",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2778.38",
+    "impressions": "21699",
+    "reach": "19963",
+    "clicks": "444",
+    "unique_clicks": "426",
+    "ctr": "2.05",
+    "cpc": "6.26",
+    "cpm": "128.04",
+    "frequency": "1.19",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.07"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "444"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "31"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "13"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5751.25"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "213.72"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-15",
+    "date_stop": "2025-04-15",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1959.59",
+    "impressions": "15598",
+    "reach": "14350",
+    "clicks": "464",
+    "unique_clicks": "445",
+    "ctr": "2.98",
+    "cpc": "4.22",
+    "cpm": "125.63",
+    "frequency": "1.13",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.89"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "464"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "32"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9582.4"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "108.87"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-16",
+    "date_stop": "2025-04-16",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4673.09",
+    "impressions": "36216",
+    "reach": "33318",
+    "clicks": "927",
+    "unique_clicks": "889",
+    "ctr": "2.56",
+    "cpc": "5.04",
+    "cpm": "129.03",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.89"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "927"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "64"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "37"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "13505.23"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "126.30"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-16",
+    "date_stop": "2025-04-16",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3214.94",
+    "impressions": "26458",
+    "reach": "24341",
+    "clicks": "592",
+    "unique_clicks": "568",
+    "ctr": "2.24",
+    "cpc": "5.43",
+    "cpm": "121.51",
+    "frequency": "1.24",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.65"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "592"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "41"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5304.65"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "189.11"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-16",
+    "date_stop": "2025-04-16",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2431.56",
+    "impressions": "18479",
+    "reach": "17000",
+    "clicks": "696",
+    "unique_clicks": "668",
+    "ctr": "3.77",
+    "cpc": "3.49",
+    "cpm": "131.59",
+    "frequency": "1.12",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.78"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "696"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "48"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "20"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9191.3"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "121.58"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-17",
+    "date_stop": "2025-04-17",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5608.75",
+    "impressions": "51095",
+    "reach": "47007",
+    "clicks": "1466",
+    "unique_clicks": "1407",
+    "ctr": "2.87",
+    "cpc": "3.83",
+    "cpm": "109.77",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.56"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1466"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "102"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "43"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19967.15"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "130.44"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-17",
+    "date_stop": "2025-04-17",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3588.2",
+    "impressions": "27198",
+    "reach": "25022",
+    "clicks": "603",
+    "unique_clicks": "578",
+    "ctr": "2.22",
+    "cpc": "5.95",
+    "cpm": "131.93",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.02"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "603"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "42"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7248.16"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "199.34"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-17",
+    "date_stop": "2025-04-17",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1987.81",
+    "impressions": "18327",
+    "reach": "16860",
+    "clicks": "659",
+    "unique_clicks": "632",
+    "ctr": "3.6",
+    "cpc": "3.02",
+    "cpm": "108.46",
+    "frequency": "1.09",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.63"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "659"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "46"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9203.56"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "104.62"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-18",
+    "date_stop": "2025-04-18",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4297.7",
+    "impressions": "38550",
+    "reach": "35466",
+    "clicks": "1010",
+    "unique_clicks": "969",
+    "ctr": "2.62",
+    "cpc": "4.26",
+    "cpm": "111.48",
+    "frequency": "1.2",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.82"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1010"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "70"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "30"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16417.21"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "143.26"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-18",
+    "date_stop": "2025-04-18",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3028.95",
+    "impressions": "25836",
+    "reach": "23769",
+    "clicks": "578",
+    "unique_clicks": "554",
+    "ctr": "2.24",
+    "cpc": "5.24",
+    "cpm": "117.24",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.53"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "578"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4634.29"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "178.17"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-18",
+    "date_stop": "2025-04-18",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2341.75",
+    "impressions": "22223",
+    "reach": "20445",
+    "clicks": "695",
+    "unique_clicks": "667",
+    "ctr": "3.13",
+    "cpc": "3.37",
+    "cpm": "105.38",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.72"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "695"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "48"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "20"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "11053.06"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "117.09"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-19",
+    "date_stop": "2025-04-19",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4361.07",
+    "impressions": "40819",
+    "reach": "37553",
+    "clicks": "1342",
+    "unique_clicks": "1288",
+    "ctr": "3.29",
+    "cpc": "3.25",
+    "cpm": "106.84",
+    "frequency": "1.25",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.39"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1342"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "93"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "40"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14784.03"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "109.03"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-19",
+    "date_stop": "2025-04-19",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2908.72",
+    "impressions": "23007",
+    "reach": "21166",
+    "clicks": "522",
+    "unique_clicks": "501",
+    "ctr": "2.27",
+    "cpc": "5.57",
+    "cpm": "126.43",
+    "frequency": "1.07",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.55"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "522"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "36"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4508.52"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "193.91"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-19",
+    "date_stop": "2025-04-19",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2383.57",
+    "impressions": "22024",
+    "reach": "20262",
+    "clicks": "781",
+    "unique_clicks": "749",
+    "ctr": "3.55",
+    "cpc": "3.05",
+    "cpm": "108.23",
+    "frequency": "1.2",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.02"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "781"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "54"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "31"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9581.95"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "76.89"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-20",
+    "date_stop": "2025-04-20",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4083.98",
+    "impressions": "31814",
+    "reach": "29268",
+    "clicks": "887",
+    "unique_clicks": "851",
+    "ctr": "2.79",
+    "cpc": "4.6",
+    "cpm": "128.37",
+    "frequency": "1.09",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.91"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "887"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "62"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "26"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "11884.38"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "157.08"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-20",
+    "date_stop": "2025-04-20",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2530",
+    "impressions": "19152",
+    "reach": "17619",
+    "clicks": "434",
+    "unique_clicks": "416",
+    "ctr": "2.27",
+    "cpc": "5.83",
+    "cpm": "132.1",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.83"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "434"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "30"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "13"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4629.9"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "194.62"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-20",
+    "date_stop": "2025-04-20",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2490.46",
+    "impressions": "20621",
+    "reach": "18971",
+    "clicks": "709",
+    "unique_clicks": "680",
+    "ctr": "3.44",
+    "cpc": "3.51",
+    "cpm": "120.77",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.71"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "709"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "49"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "28"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9239.61"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "88.95"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-21",
+    "date_stop": "2025-04-21",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4143.97",
+    "impressions": "35389",
+    "reach": "32557",
+    "clicks": "934",
+    "unique_clicks": "896",
+    "ctr": "2.64",
+    "cpc": "4.44",
+    "cpm": "117.1",
+    "frequency": "1.25",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.9"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "934"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "65"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "28"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "12017.51"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "148.00"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-21",
+    "date_stop": "2025-04-21",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2994.9",
+    "impressions": "27073",
+    "reach": "24907",
+    "clicks": "652",
+    "unique_clicks": "625",
+    "ctr": "2.41",
+    "cpc": "4.59",
+    "cpm": "110.62",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.09"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "652"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "45"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6259.34"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "157.63"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-21",
+    "date_stop": "2025-04-21",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2104.37",
+    "impressions": "19549",
+    "reach": "17985",
+    "clicks": "682",
+    "unique_clicks": "654",
+    "ctr": "3.49",
+    "cpc": "3.09",
+    "cpm": "107.65",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.18"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "682"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "47"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "20"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8796.27"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "105.22"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-22",
+    "date_stop": "2025-04-22",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5714.57",
+    "impressions": "46802",
+    "reach": "43057",
+    "clicks": "1202",
+    "unique_clicks": "1153",
+    "ctr": "2.57",
+    "cpc": "4.75",
+    "cpm": "122.1",
+    "frequency": "1.25",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.58"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1202"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "84"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "48"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "20458.16"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "119.05"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-22",
+    "date_stop": "2025-04-22",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3169.47",
+    "impressions": "27986",
+    "reach": "25747",
+    "clicks": "531",
+    "unique_clicks": "509",
+    "ctr": "1.9",
+    "cpc": "5.97",
+    "cpm": "113.25",
+    "frequency": "1.12",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.78"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "531"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "37"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "21"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5641.66"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "150.93"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-22",
+    "date_stop": "2025-04-22",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2541",
+    "impressions": "23377",
+    "reach": "21506",
+    "clicks": "839",
+    "unique_clicks": "805",
+    "ctr": "3.59",
+    "cpc": "3.03",
+    "cpm": "108.7",
+    "frequency": "1.08",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.28"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "839"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "58"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "25"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "10875.48"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "101.64"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-23",
+    "date_stop": "2025-04-23",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4127.29",
+    "impressions": "31367",
+    "reach": "28857",
+    "clicks": "975",
+    "unique_clicks": "936",
+    "ctr": "3.11",
+    "cpc": "4.23",
+    "cpm": "131.58",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.58"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "975"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "68"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "29"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14775.7"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "142.32"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-23",
+    "date_stop": "2025-04-23",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3281.93",
+    "impressions": "29274",
+    "reach": "26932",
+    "clicks": "544",
+    "unique_clicks": "522",
+    "ctr": "1.86",
+    "cpc": "6.03",
+    "cpm": "112.11",
+    "frequency": "1.2",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.89"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "544"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "38"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6202.85"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "205.12"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-23",
+    "date_stop": "2025-04-23",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2513.18",
+    "impressions": "20532",
+    "reach": "18889",
+    "clicks": "673",
+    "unique_clicks": "646",
+    "ctr": "3.28",
+    "cpc": "3.73",
+    "cpm": "122.4",
+    "frequency": "1.21",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.75"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "673"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "47"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "26"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9424.42"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "96.66"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-24",
+    "date_stop": "2025-04-24",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4247.89",
+    "impressions": "39717",
+    "reach": "36539",
+    "clicks": "1084",
+    "unique_clicks": "1040",
+    "ctr": "2.73",
+    "cpc": "3.92",
+    "cpm": "106.95",
+    "frequency": "1.22",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.93"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1084"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "75"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "32"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "12446.32"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "132.75"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-24",
+    "date_stop": "2025-04-24",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3455.29",
+    "impressions": "27953",
+    "reach": "25716",
+    "clicks": "614",
+    "unique_clicks": "589",
+    "ctr": "2.2",
+    "cpc": "5.63",
+    "cpm": "123.61",
+    "frequency": "1.06",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.53"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "614"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "42"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5286.59"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "191.96"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-24",
+    "date_stop": "2025-04-24",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2534.58",
+    "impressions": "21670",
+    "reach": "19936",
+    "clicks": "728",
+    "unique_clicks": "698",
+    "ctr": "3.36",
+    "cpc": "3.48",
+    "cpm": "116.96",
+    "frequency": "1.22",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.93"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "728"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "50"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "29"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9960.9"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "87.40"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-25",
+    "date_stop": "2025-04-25",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4089.24",
+    "impressions": "34104",
+    "reach": "31375",
+    "clicks": "985",
+    "unique_clicks": "945",
+    "ctr": "2.89",
+    "cpc": "4.15",
+    "cpm": "119.9",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.71"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "985"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "68"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "29"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15171.08"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "141.01"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-25",
+    "date_stop": "2025-04-25",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3715.32",
+    "impressions": "30391",
+    "reach": "27959",
+    "clicks": "656",
+    "unique_clicks": "629",
+    "ctr": "2.16",
+    "cpc": "5.66",
+    "cpm": "122.25",
+    "frequency": "1.21",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.53"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "656"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "45"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "19"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5684.44"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "195.54"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-25",
+    "date_stop": "2025-04-25",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1872.94",
+    "impressions": "17362",
+    "reach": "15973",
+    "clicks": "630",
+    "unique_clicks": "604",
+    "ctr": "3.63",
+    "cpc": "2.97",
+    "cpm": "107.88",
+    "frequency": "1.1",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.95"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "630"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "44"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7398.11"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "104.05"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-26",
+    "date_stop": "2025-04-26",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "3945.05",
+    "impressions": "32191",
+    "reach": "29615",
+    "clicks": "1010",
+    "unique_clicks": "969",
+    "ctr": "3.14",
+    "cpc": "3.91",
+    "cpm": "122.55",
+    "frequency": "1.06",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.78"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1010"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "70"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "30"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "10967.24"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "131.50"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-26",
+    "date_stop": "2025-04-26",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3171.51",
+    "impressions": "27401",
+    "reach": "25208",
+    "clicks": "548",
+    "unique_clicks": "526",
+    "ctr": "2",
+    "cpc": "5.79",
+    "cpm": "115.74",
+    "frequency": "1.06",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.12"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "548"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "38"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6723.6"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "198.22"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-26",
+    "date_stop": "2025-04-26",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2618.82",
+    "impressions": "23386",
+    "reach": "21515",
+    "clicks": "886",
+    "unique_clicks": "850",
+    "ctr": "3.79",
+    "cpc": "2.96",
+    "cpm": "111.98",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.69"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "886"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "62"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "35"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9663.45"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "74.82"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-27",
+    "date_stop": "2025-04-27",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4085.63",
+    "impressions": "35177",
+    "reach": "32362",
+    "clicks": "1062",
+    "unique_clicks": "1019",
+    "ctr": "3.02",
+    "cpc": "3.85",
+    "cpm": "116.14",
+    "frequency": "1.09",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.15"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1062"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "74"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "42"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "12869.73"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "97.28"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-27",
+    "date_stop": "2025-04-27",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3238.51",
+    "impressions": "28077",
+    "reach": "25830",
+    "clicks": "659",
+    "unique_clicks": "632",
+    "ctr": "2.35",
+    "cpc": "4.91",
+    "cpm": "115.34",
+    "frequency": "1.07",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.71"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "659"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "46"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "26"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5537.85"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "124.56"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-27",
+    "date_stop": "2025-04-27",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2182.44",
+    "impressions": "20122",
+    "reach": "18512",
+    "clicks": "762",
+    "unique_clicks": "731",
+    "ctr": "3.79",
+    "cpc": "2.86",
+    "cpm": "108.46",
+    "frequency": "1.12",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.26"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "762"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "53"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "22"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9297.19"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "99.20"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-28",
+    "date_stop": "2025-04-28",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5328.8",
+    "impressions": "48598",
+    "reach": "44710",
+    "clicks": "1525",
+    "unique_clicks": "1464",
+    "ctr": "3.14",
+    "cpc": "3.49",
+    "cpm": "109.65",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1525"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "106"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "61"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15986.4"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "87.36"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-28",
+    "date_stop": "2025-04-28",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3346.34",
+    "impressions": "27640",
+    "reach": "25428",
+    "clicks": "555",
+    "unique_clicks": "532",
+    "ctr": "2.01",
+    "cpc": "6.03",
+    "cpm": "121.07",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.12"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "555"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "38"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7094.24"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "209.15"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-28",
+    "date_stop": "2025-04-28",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2062.08",
+    "impressions": "17115",
+    "reach": "15745",
+    "clicks": "556",
+    "unique_clicks": "533",
+    "ctr": "3.25",
+    "cpc": "3.71",
+    "cpm": "120.48",
+    "frequency": "1.12",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.86"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "556"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "38"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "10021.71"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "128.88"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-29",
+    "date_stop": "2025-04-29",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4825.86",
+    "impressions": "39041",
+    "reach": "35917",
+    "clicks": "1175",
+    "unique_clicks": "1128",
+    "ctr": "3.01",
+    "cpc": "4.11",
+    "cpm": "123.61",
+    "frequency": "1.08",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.2"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1175"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "82"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "35"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15442.75"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "137.88"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-29",
+    "date_stop": "2025-04-29",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2757.38",
+    "impressions": "24154",
+    "reach": "22221",
+    "clicks": "582",
+    "unique_clicks": "558",
+    "ctr": "2.41",
+    "cpc": "4.74",
+    "cpm": "114.16",
+    "frequency": "1.23",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.99"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "582"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5487.19"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "162.20"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-29",
+    "date_stop": "2025-04-29",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2297.6",
+    "impressions": "19093",
+    "reach": "17565",
+    "clicks": "670",
+    "unique_clicks": "643",
+    "ctr": "3.51",
+    "cpc": "3.43",
+    "cpm": "120.34",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.51"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "670"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "46"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "20"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "10362.18"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "114.88"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-30",
+    "date_stop": "2025-04-30",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4304.25",
+    "impressions": "37317",
+    "reach": "34331",
+    "clicks": "1216",
+    "unique_clicks": "1167",
+    "ctr": "3.26",
+    "cpc": "3.54",
+    "cpm": "115.34",
+    "frequency": "1.07",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.39"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1216"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "85"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "36"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14591.41"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "119.56"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-30",
+    "date_stop": "2025-04-30",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3382.87",
+    "impressions": "26217",
+    "reach": "24119",
+    "clicks": "582",
+    "unique_clicks": "558",
+    "ctr": "2.22",
+    "cpc": "5.81",
+    "cpm": "129.03",
+    "frequency": "1.22",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.66"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "582"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "23"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5615.56"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "147.08"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-04-30",
+    "date_stop": "2025-04-30",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1967.47",
+    "impressions": "18336",
+    "reach": "16869",
+    "clicks": "572",
+    "unique_clicks": "549",
+    "ctr": "3.12",
+    "cpc": "3.44",
+    "cpm": "107.3",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.47"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "572"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8794.59"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "115.73"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-01",
+    "date_stop": "2025-05-01",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4705.9",
+    "impressions": "36658",
+    "reach": "33725",
+    "clicks": "1213",
+    "unique_clicks": "1164",
+    "ctr": "3.31",
+    "cpc": "3.88",
+    "cpm": "128.37",
+    "frequency": "1.2",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.98"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1213"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "84"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "36"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14023.58"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "130.72"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-01",
+    "date_stop": "2025-05-01",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3610.87",
+    "impressions": "34267",
+    "reach": "31525",
+    "clicks": "681",
+    "unique_clicks": "653",
+    "ctr": "1.99",
+    "cpc": "5.3",
+    "cpm": "105.37",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.89"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "681"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "47"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "27"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6824.54"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "133.74"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-01",
+    "date_stop": "2025-05-01",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2541.54",
+    "impressions": "23992",
+    "reach": "22072",
+    "clicks": "796",
+    "unique_clicks": "764",
+    "ctr": "3.32",
+    "cpc": "3.19",
+    "cpm": "105.93",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.46"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "796"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "55"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "23"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8793.73"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "110.50"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-02",
+    "date_stop": "2025-05-02",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4331.45",
+    "impressions": "39719",
+    "reach": "36541",
+    "clicks": "1000",
+    "unique_clicks": "960",
+    "ctr": "2.52",
+    "cpc": "4.33",
+    "cpm": "109.05",
+    "frequency": "1.07",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.51"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1000"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "70"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "40"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15203.39"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "108.29"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-02",
+    "date_stop": "2025-05-02",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3276.97",
+    "impressions": "30049",
+    "reach": "27645",
+    "clicks": "628",
+    "unique_clicks": "602",
+    "ctr": "2.09",
+    "cpc": "5.22",
+    "cpm": "109.05",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.82"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "628"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "43"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "25"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5964.09"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "131.08"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-02",
+    "date_stop": "2025-05-02",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2240.09",
+    "impressions": "17808",
+    "reach": "16383",
+    "clicks": "682",
+    "unique_clicks": "654",
+    "ctr": "3.83",
+    "cpc": "3.28",
+    "cpm": "125.79",
+    "frequency": "1.22",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.82"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "682"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "47"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "27"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8557.14"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "82.97"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-03",
+    "date_stop": "2025-05-03",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5288.06",
+    "impressions": "47486",
+    "reach": "43687",
+    "clicks": "1377",
+    "unique_clicks": "1321",
+    "ctr": "2.9",
+    "cpc": "3.84",
+    "cpm": "111.36",
+    "frequency": "1.21",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.02"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1377"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "96"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "41"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15969.94"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "128.98"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-03",
+    "date_stop": "2025-05-03",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2807.22",
+    "impressions": "22008",
+    "reach": "20247",
+    "clicks": "530",
+    "unique_clicks": "508",
+    "ctr": "2.41",
+    "cpc": "5.3",
+    "cpm": "127.55",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.68"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "530"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "37"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4716.13"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "187.15"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-03",
+    "date_stop": "2025-05-03",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2227.59",
+    "impressions": "19090",
+    "reach": "17562",
+    "clicks": "715",
+    "unique_clicks": "686",
+    "ctr": "3.75",
+    "cpc": "3.12",
+    "cpm": "116.69",
+    "frequency": "1.08",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.83"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "715"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "50"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "21"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "8531.67"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "106.08"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-04",
+    "date_stop": "2025-05-04",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4719.93",
+    "impressions": "40780",
+    "reach": "37517",
+    "clicks": "1182",
+    "unique_clicks": "1134",
+    "ctr": "2.9",
+    "cpc": "3.99",
+    "cpm": "115.74",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3.18"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1182"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "82"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "47"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "15009.38"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "100.42"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-04",
+    "date_stop": "2025-05-04",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3036.76",
+    "impressions": "25174",
+    "reach": "23160",
+    "clicks": "566",
+    "unique_clicks": "543",
+    "ctr": "2.25",
+    "cpc": "5.37",
+    "cpm": "120.63",
+    "frequency": "1.14",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.02"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "566"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "39"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "16"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6134.26"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "189.80"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-04",
+    "date_stop": "2025-05-04",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2061.55",
+    "impressions": "17914",
+    "reach": "16480",
+    "clicks": "594",
+    "unique_clicks": "570",
+    "ctr": "3.32",
+    "cpc": "3.47",
+    "cpm": "115.08",
+    "frequency": "1.18",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4.8"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "594"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "41"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "23"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "9895.44"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "89.63"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-05",
+    "date_stop": "2025-05-05",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4857.71",
+    "impressions": "36724",
+    "reach": "33786",
+    "clicks": "958",
+    "unique_clicks": "919",
+    "ctr": "2.61",
+    "cpc": "5.07",
+    "cpm": "132.28",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.58"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "958"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "67"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "38"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7675.18"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "127.83"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-05",
+    "date_stop": "2025-05-05",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2715.19",
+    "impressions": "22074",
+    "reach": "20308",
+    "clicks": "401",
+    "unique_clicks": "384",
+    "ctr": "1.82",
+    "cpc": "6.77",
+    "cpm": "123",
+    "frequency": "1.09",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "0.95"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "401"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "28"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "12"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2579.43"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "226.27"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-05",
+    "date_stop": "2025-05-05",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2538.58",
+    "impressions": "21603",
+    "reach": "19874",
+    "clicks": "691",
+    "unique_clicks": "663",
+    "ctr": "3.2",
+    "cpc": "3.67",
+    "cpm": "117.51",
+    "frequency": "1.17",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.64"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "691"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "48"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "27"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6701.85"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "94.02"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-06",
+    "date_stop": "2025-05-06",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5395.03",
+    "impressions": "45318",
+    "reach": "41692",
+    "clicks": "1450",
+    "unique_clicks": "1392",
+    "ctr": "3.2",
+    "cpc": "3.72",
+    "cpm": "119.05",
+    "frequency": "1.18",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.09"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1450"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "101"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "58"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "11275.61"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "93.02"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-06",
+    "date_stop": "2025-05-06",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "2887.9",
+    "impressions": "24835",
+    "reach": "22848",
+    "clicks": "494",
+    "unique_clicks": "474",
+    "ctr": "1.99",
+    "cpc": "5.85",
+    "cpm": "116.28",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "0.97"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "494"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "34"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "14"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2801.26"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "206.28"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-06",
+    "date_stop": "2025-05-06",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1905.17",
+    "impressions": "15717",
+    "reach": "14459",
+    "clicks": "573",
+    "unique_clicks": "550",
+    "ctr": "3.65",
+    "cpc": "3.32",
+    "cpm": "121.22",
+    "frequency": "1.24",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.22"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "573"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4229.48"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "112.07"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-07",
+    "date_stop": "2025-05-07",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4326.78",
+    "impressions": "37902",
+    "reach": "34869",
+    "clicks": "1137",
+    "unique_clicks": "1091",
+    "ctr": "3",
+    "cpc": "3.81",
+    "cpm": "114.16",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.56"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1137"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "79"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "34"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "6749.78"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "127.26"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-07",
+    "date_stop": "2025-05-07",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3609.63",
+    "impressions": "32270",
+    "reach": "29688",
+    "clicks": "771",
+    "unique_clicks": "740",
+    "ctr": "2.39",
+    "cpc": "4.68",
+    "cpm": "111.86",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "0.93"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "771"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "53"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "30"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3356.96"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "120.32"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-07",
+    "date_stop": "2025-05-07",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1906.54",
+    "impressions": "15423",
+    "reach": "14189",
+    "clicks": "566",
+    "unique_clicks": "543",
+    "ctr": "3.67",
+    "cpc": "3.37",
+    "cpm": "123.62",
+    "frequency": "1.15",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.4"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "566"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "39"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "22"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4575.7"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "86.66"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-08",
+    "date_stop": "2025-05-08",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "5606.19",
+    "impressions": "44064",
+    "reach": "40538",
+    "clicks": "1396",
+    "unique_clicks": "1340",
+    "ctr": "3.17",
+    "cpc": "4.02",
+    "cpm": "127.23",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "1396"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "97"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "41"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "11212.38"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "136.74"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-08",
+    "date_stop": "2025-05-08",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3199.22",
+    "impressions": "27097",
+    "reach": "24929",
+    "clicks": "606",
+    "unique_clicks": "581",
+    "ctr": "2.24",
+    "cpc": "5.28",
+    "cpm": "118.07",
+    "frequency": "1.09",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "0.84"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "606"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "42"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2687.34"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "177.73"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-08",
+    "date_stop": "2025-05-08",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "1825.95",
+    "impressions": "15064",
+    "reach": "13858",
+    "clicks": "584",
+    "unique_clicks": "560",
+    "ctr": "3.88",
+    "cpc": "3.13",
+    "cpm": "121.21",
+    "frequency": "1.16",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.69"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "584"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "40"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "17"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "4911.81"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "107.41"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-09",
+    "date_stop": "2025-05-09",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100001",
+    "ad_set_name": "Women-25-44-Mumbai-Delhi",
+    "ad_id": "23852222200001",
+    "ad_name": "KURTA-L-RED-Carousel-v3",
+    "account_currency": "INR",
+    "spend": "4154.24",
+    "impressions": "37720",
+    "reach": "34702",
+    "clicks": "943",
+    "unique_clicks": "905",
+    "ctr": "2.5",
+    "cpc": "4.41",
+    "cpm": "110.13",
+    "frequency": "1.08",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1.9"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "943"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "66"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "37"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "7893.06"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "112.28"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-09",
+    "date_stop": "2025-05-09",
+    "campaign_id": "23851234567890",
+    "campaign_name": "KURTA-SS25-Acquisition",
+    "ad_set_id": "23851111100002",
+    "ad_set_name": "Women-18-24-Tier2-Cities",
+    "ad_id": "23852222200002",
+    "ad_name": "KURTA-L-RED-Video-v1",
+    "account_currency": "INR",
+    "spend": "3580.69",
+    "impressions": "33443",
+    "reach": "30767",
+    "clicks": "725",
+    "unique_clicks": "696",
+    "ctr": "2.17",
+    "cpc": "4.94",
+    "cpm": "107.07",
+    "frequency": "1.11",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "1"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "725"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "50"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "21"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "3580.69"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "170.51"
+      }
+    ],
+    "account_id": "act_987654321"
+  },
+  {
+    "date_start": "2025-05-09",
+    "date_stop": "2025-05-09",
+    "campaign_id": "23851234567891",
+    "campaign_name": "LINEN-SETS-Retargeting",
+    "ad_set_id": "23851111100003",
+    "ad_set_name": "Site-Visitors-7day",
+    "ad_id": "23852222200003",
+    "ad_name": "LINEN-SET-DPA-v2",
+    "account_currency": "INR",
+    "spend": "2056.28",
+    "impressions": "19349",
+    "reach": "17801",
+    "clicks": "615",
+    "unique_clicks": "590",
+    "ctr": "3.18",
+    "cpc": "3.34",
+    "cpm": "106.27",
+    "frequency": "1.08",
+    "purchase_roas": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "2.61"
+      }
+    ],
+    "actions": [
+      {
+        "action_type": "link_click",
+        "value": "615"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_add_to_cart",
+        "value": "43"
+      },
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "18"
+      }
+    ],
+    "action_values": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "5366.89"
+      }
+    ],
+    "cost_per_action_type": [
+      {
+        "action_type": "offsite_conversion.fb_pixel_purchase",
+        "value": "114.24"
+      }
+    ],
+    "account_id": "act_987654321"
+  }
+]

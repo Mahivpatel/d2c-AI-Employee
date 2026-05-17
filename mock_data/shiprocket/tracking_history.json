@@ -1,0 +1,38 @@
+[
+  {
+    "id": "trk-1",
+    "shipment_id": 501001,
+    "awb_code": "SRX1000001",
+    "courier_name": "Delhivery Surface",
+    "status": "Picked Up",
+    "created_at": "2026-05-02T20:00:00+05:30",
+    "pincode": "400063"
+  },
+  {
+    "id": "trk-2",
+    "shipment_id": 501001,
+    "awb_code": "SRX1000001",
+    "courier_name": "Delhivery Surface",
+    "status": "Delivered",
+    "created_at": "2026-05-05T14:20:00+05:30",
+    "pincode": "400063"
+  },
+  {
+    "id": "trk-3",
+    "shipment_id": 501002,
+    "awb_code": "SRX1000002",
+    "courier_name": "Delhivery Surface",
+    "status": "RTO Delivered",
+    "created_at": "2026-05-10T18:10:00+05:30",
+    "pincode": "400063"
+  },
+  {
+    "id": "trk-4",
+    "shipment_id": 501008,
+    "awb_code": "SRX1000008",
+    "courier_name": "Xpressbees",
+    "status": "In Transit",
+    "created_at": "2026-05-09T09:00:00+05:30",
+    "pincode": "110024"
+  }
+]

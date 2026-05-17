@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ndr-1",
+    "shipment_id": 501003,
+    "awb_code": "SRX1000003",
+    "courier_name": "Delhivery Surface",
+    "status": "NDR",
+    "reason": "Customer not reachable",
+    "created_at": "2026-05-07T16:30:00+05:30",
+    "pincode": "400063"
+  },
+  {
+    "id": "ndr-2",
+    "shipment_id": 501006,
+    "awb_code": "SRX1000006",
+    "courier_name": "Blue Dart",
+    "status": "NDR",
+    "reason": "Customer refused delivery",
+    "created_at": "2026-05-09T12:25:00+05:30",
+    "pincode": "560034"
+  },
+  {
+    "id": "ndr-3",
+    "shipment_id": 501010,
+    "awb_code": "SRX1000010",
+    "courier_name": "Delhivery Surface",
+    "status": "NDR",
+    "reason": "Address incomplete",
+    "created_at": "2026-05-12T18:10:00+05:30",
+    "pincode": "400063"
+  }
+]

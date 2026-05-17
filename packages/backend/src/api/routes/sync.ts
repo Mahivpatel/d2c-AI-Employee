@@ -11,6 +11,8 @@ import { db } from "../../db/client";
 import { syncLogs } from "../../db/schema";
 import { eq } from "drizzle-orm";
 import { ShopifyConnector } from "../../connectors/shopify";
+import { ShiprocketConnector } from "../../connectors/shiprocket";
+import { MetaAdsConnector } from "../../connectors/metaAds";
 import { upsertFacts } from "../../connectors/upsert";
 import { BaseConnector } from "../../connectors/base";
 
@@ -22,8 +24,12 @@ function resolveConnector(connector: string): BaseConnector {
   switch (connector) {
     case "shopify":
       return new ShopifyConnector();
+    case "shiprocket":
+      return new ShiprocketConnector();
+    case "meta_ads":
+      return new MetaAdsConnector();
     default:
-      throw new Error(`Unknown connector: "${connector}". Supported: shopify.`);
+      throw new Error(`Unknown connector: "${connector}". Supported: shopify, meta_ads, shiprocket.`);
   }
 }
 
@@ -40,6 +46,9 @@ const FetchRequestSchema = z.object({
       limit:    z.number().int().positive().max(250).optional(),
       sinceId:  z.string().optional(),
       status:   z.string().optional(),
+      campaign_id: z.string().optional(),
+      ad_set_id: z.string().optional(),
+      ad_id: z.string().optional(),
     })
     .optional(),
 });

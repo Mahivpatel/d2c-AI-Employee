@@ -62,8 +62,8 @@ export const facts = pgTable(
     occurredAtIdx: index("ix_facts_occurred_at")
       .on(table.occurredAt),
     // Upsert deduplication
-    sourceRawIdIdx: uniqueIndex("ix_facts_source_raw_id")
-      .on(table.source, table.rawId),
+    merchantSourceRawIdIdx: uniqueIndex("ix_facts_merchant_source_raw_id")
+      .on(table.merchantId, table.source, table.rawId),
     // JSONB dimension queries — WHERE dimensions->>'pincode' = '400063'
     dimensionsGinIdx: index("ix_facts_dimensions_gin")
       .on(table.dimensions)

@@ -1,5 +1,5 @@
 // ── Drizzle upsert for NormalizedFact[] → facts table ────────────────────────
-// Uses the (source, raw_id) unique index so re-running a sync is idempotent.
+// Uses the (merchant_id, source, raw_id) unique index so re-running a sync is idempotent.
 // Existing rows are refreshed, which is important for inventory snapshots where
 // stock and cost change over time.
 //
@@ -77,7 +77,7 @@ export async function upsertFacts(
       .insert(facts)
       .values(chunk)
       .onConflictDoUpdate({
-        target: [facts.source, facts.rawId],
+        target: [facts.merchantId, facts.source, facts.rawId],
         set: {
           merchantId:       sql`excluded.merchant_id`,
           entityType:       sql`excluded.entity_type`,
@@ -90,7 +90,7 @@ export async function upsertFacts(
           dimensions:       sql`excluded.dimensions`,
           rawPayload:       sql`excluded.raw_payload`,
         },
-      }); // dedup key: ix_facts_source_raw_id (source, raw_id)
+      }); // dedup key: ix_facts_merchant_source_raw_id (merchant_id, source, raw_id)
 
     // Drizzle's upsert doesn't return a count in all drivers,
     // so we conservatively track attempted and compute delta later if needed.

@@ -14,9 +14,9 @@ export function verifyCitations(text: string, toolResults: any[]) {
   }
 
   // Find citations in text: [src: shopify, fact_ids: f_1, f_2]
-  const citationRegex = /\[src: shopify, fact_ids: ([^\]]+)\]/g;
+  const citationRegex = /\[src: (shopify|meta_ads|shiprocket), fact_ids: ([^\]]+)\]/g;
   
-  const verified = text.replace(citationRegex, (match, idsString) => {
+  const verified = text.replace(citationRegex, (match, source, idsString) => {
     const ids = idsString.split(',').map((s: string) => s.trim());
     const validIds = ids.filter((id: string) => validFactIds.has(id));
     
@@ -24,7 +24,7 @@ export function verifyCitations(text: string, toolResults: any[]) {
       // If all hallucinated, we could strip it completely or flag it
       return ''; 
     }
-    return `[src: shopify, fact_ids: ${validIds.join(', ')}]`;
+    return `[src: ${source}, fact_ids: ${validIds.join(', ')}]`;
   });
 
   return { verified: verified.trim() };

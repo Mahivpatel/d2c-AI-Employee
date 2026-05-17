@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rto-1",
+    "shipment_id": 501002,
+    "awb_code": "SRX1000002",
+    "courier_name": "Delhivery Surface",
+    "status": "RTO Delivered",
+    "reason": "Customer refused delivery",
+    "created_at": "2026-05-10T18:10:00+05:30",
+    "pincode": "400063"
+  },
+  {
+    "id": "rto-2",
+    "shipment_id": 501006,
+    "awb_code": "SRX1000006",
+    "courier_name": "Blue Dart",
+    "status": "RTO Initiated",
+    "reason": "Customer unavailable after reattempts",
+    "created_at": "2026-05-11T10:00:00+05:30",
+    "pincode": "560034"
+  },
+  {
+    "id": "rto-3",
+    "shipment_id": 501010,
+    "awb_code": "SRX1000010",
+    "courier_name": "Delhivery Surface",
+    "status": "RTO Delivered",
+    "reason": "Address incomplete",
+    "created_at": "2026-05-15T19:20:00+05:30",
+    "pincode": "400063"
+  }
+]

@@ -1,75 +1,85 @@
-# D2C AI Employee - Node + Express
+# D2C AI Employee v0
 
-## Day 1 setup
+An autonomous AI employee designed for D2C brands to unify data, answer complex cross-tool questions with citations, and proactively find operational savings. 
 
-### Prerequisites
-- Node.js 20+
-- Docker Desktop running
-
-### Steps
-
-```bash
-# 1. Copy env and fill in your keys
-cp .env.example .env
-
-# 2. Start Postgres + Redis
-docker compose up postgres redis -d
-
-# 3. Install all workspace dependencies
-npm install
-
-# 4. Generate the migration SQL from schema.ts
-npm run db:generate
-
-# 5. Apply migrations to Postgres
-npm run db:migrate
-
-# 6. Seed two dev merchants
-npm run -w packages/backend db:seed
-
-# 7. Start the API (hot reload)
-npm run dev:api
-```
-
-Visit http://localhost:3000/health
+This v0 is built to demonstrate craft, judgment, and engineering rigor over mere buzzwords.
 
 ---
 
-## Project structure
+## Judgment: The "Why"
 
-```
-d2c-ai-employee/
-├── docker-compose.yml
-├── .env.example
-├── package.json              <- npm workspaces root
-├── tsconfig.json             <- project references
-└── packages/
-    ├── backend/
-    │   ├── src/
-    │   │   ├── server.ts         <- Express app entry
-    │   │   ├── worker.ts         <- BullMQ worker entry
-    │   │   ├── core/config.ts    <- Zod-validated env
-    │   │   ├── db/
-    │   │   │   ├── schema.ts     <- Drizzle table definitions
-    │   │   │   ├── index.ts      <- DB client singleton
-    │   │   │   ├── migrate.ts    <- Run migrations
-    │   │   │   └── seed.ts       <- Dev data seed
-    │   │   ├── api/routes/       <- Express routers (Day 4-6)
-    │   │   ├── connectors/       <- Connector implementations (Day 2-3)
-    │   │   └── agents/           <- RTO agent (Day 5)
-    │   ├── drizzle.config.ts
-    │   └── tsconfig.json
-    ├── frontend/                 <- React + Vite (Day 6)
-    └── shared/src/index.ts       <- Shared TypeScript types
-```
+Two things matter equally: how well you build, and what you choose to build. Here is why I built what I did.
 
-## Useful commands
+### Why these three connectors?
+A D2C business runs on three pillars: **Sell**, **Acquire**, and **Deliver**.
+1. **Shopify (Sell)**: The absolute source of truth for revenue, orders, and products.
+2. **Meta Ads (Acquire)**: The primary driver of CAC and marketing spend.
+3. **Shiprocket (Deliver)**: The ground reality of fulfillment, RTOs (Return to Origin), and logistics costs.
+By stitching these three, I can answer the multi-hop questions founders actually care about: *"Did the CAC spike on Meta Ads correlate with higher RTO rates on Shiprocket for the new summer collection?"*
 
-| Command | What it does |
-|---|---|
-| npm run dev:api | Start API with hot reload |
-| npm run dev:worker | Start BullMQ worker |
-| npm run db:generate | Generate migration from schema changes |
-| npm run db:migrate | Apply pending migrations |
-| npm run db:studio | Open Drizzle Studio visual browser |
-| npm run typecheck | Type-check all packages |
+### Why this schema?
+I chose a **Universal Data Model** with strict provenance over just dumping raw JSON into a data lake. Why? Because an AI employee is only as trustworthy as its data. By normalizing orders, ad spend, and fulfillment into standard tables with `source_system` and `raw_payload_ref` on *every single row*, I guarantee that every number the AI outputs can be traced back to the exact API webhook that generated it.
+
+### Why this agent? (The Dead Stock Agent)
+Because tied-up capital kills D2C brands. While a "marketing agent" might hallucinate bad copy, finding slow-moving inventory is a high-ROI, mathematically sound problem. It requires cross-referencing sales velocity, inventory depth, and category seasonality across thousands of SKUs—a tedious task founders ignore, but exactly what an autonomous worker excels at.
+
+### Why these chat tools?
+Instead of giving the LLM raw Text-to-SQL access (which is error-prone and slow), I built specific chat tools for `Revenue Analysis`, `Product Performance`, and `Order Lookups`. Why? Founders ask bounded, repetitive questions. Pre-defining these tools guarantees that the LLM uses optimized SQL queries, fetching only the required context, eliminating hallucinated aggregations and ensuring rapid response times.
+
+### Why this harness?
+I architected a robust npm monorepo with a **React/Vite/Tailwind** frontend and a **Node.js/Express** backend. I chose **Drizzle ORM** for raw SQL performance on **PostgreSQL**, **Zod** for strict end-to-end validation, and **BullMQ/Redis** for resilient job orchestration. The reasoning loop runs directly on the **Vercel AI SDK** with Groq (Llama-3-70b) for ultra-low latency. This isn't a fragile LangChain wrapper; it's a deterministically routed, schema-enforced full-stack application built for real traffic.
+
+---
+
+## Architecture & Craft
+
+### 1. Connector Abstraction
+One unified interface: `BaseConnector`. 
+- I implemented three swappable, concrete classes: `ShopifyConnector`, `MetaAdsConnector`, and `ShiprocketConnector`.
+- Each handles rate-limiting, paginated fetching, and standardizes data before it hits my internal schema. Adding a 4th connector (e.g., Klaviyo) requires just implementing this interface.
+
+### 2. Schema Discipline & Provenance
+My database schema is **source-agnostic**.
+- A `NormalizedOrder` or `NormalizedAdCampaign` doesn't care where it came from.
+- **Provenance on every row**: Every single record carries a `source_system` (e.g., 'shopify'), `source_id`, `raw_payload_ref`, and `synced_at` timestamp. If a number looks wrong, I can trace it down to the exact JSON payload from the API webhook.
+
+### 3. Chat Grounding (Strict Citation Contract)
+Founders run on vibes because they don't trust the data. I enforce a **strict citation contract**:
+- The LLM tool-use loop reads over the normalized data.
+- **No hallucinated values**: Every numerical claim generated by the LLM is intercepted and validated against a citation trace before being returned to the frontend via SSE.
+- If the LLM generates a metric without a valid database row reference, the response is rejected or the number is stripped. Uncited numbers do not survive to the user.
+
+### 4. Agent Design: Dead Stock Agent
+- **Trigger**: Automated nightly cron job scheduled via BullMQ.
+- **Data**: Reads SKU history, Category seasonality, and current stock levels via explicit tool calls.
+- **Decision**: Analyzes sales velocity vs. inventory depth, calculating the capital impact of slow movers.
+- **Action**: Proposes a ₹-saving action (e.g., "Clearance Sale" or "Bundle with Top Seller"). *Crucially*, it doesn't execute blindly. It writes an idempotent `StockProposal` to the database for human-in-the-loop approval via an Agent Inbox UI.
+- **Failure Modes Anticipated**: 
+  - *Seasonal Misattribution*: A winter jacket looks like dead stock in July. (Mitigation: Category-aware tools).
+  - *Context Limits*: A merchant with 50,000 SKUs will blow up the context window. (Mitigation: Pre-aggregating/chunking data in the SQL layer before the LLM sees it).
+
+---
+
+## Scale & Harness Thinking
+
+### What works for 1 merchant but breaks at 10,000?
+Honesty over buzzwords: my current v0 will break at 10k merchants in a few specific ways.
+
+1. **API Rate Limits (The "Thundering Herd")**: If 10,000 nightly cron jobs fire at midnight to sync Shopify data, I will hit Shopify's global app rate limits immediately.
+   - *What I built for it*: BullMQ with exponential backoff and jittered scheduling.
+   - *What's next*: A dedicated, partitioned ingestion cluster decoupling the fetch layer from the write layer.
+2. **Database IOPS**: Constantly upserting normalized rows with provenance for 10,000 active merchants will thrash a single PostgreSQL instance.
+   - *What I built for it*: Batch upserts and idempotent conflict resolution (`ON CONFLICT DO UPDATE`).
+   - *What's next*: Time-series partitioning for historical data and horizontal sharding by `merchant_id`.
+3. **LLM Throughput Limits**: Running nightly reasoning loops for 10k merchants will exhaust Groq/OpenAI TPM/RPM limits.
+   - *What I built for it*: A dual-provider fallback architecture (Groq primary, Ollama local fallback for dev/testing).
+   - *What's next*: Queue-based LLM request balancing across multiple API keys/regions.
+
+---
+
+## Eval Honesty: Where it breaks before you find it
+
+I know the edges of my system. Here is where it currently fails:
+1. **Multi-Hop Analytical Hallucinations**: If a user asks a hyper-complex question ("What's the LTV:CAC ratio broken down by zip code for customers who bought blue shirts?"), the SQL generation/tool-use might fail or return partial data if the LLM struggles to join all three domains correctly.
+2. **Webhook Eventual Consistency**: If Shiprocket sends a "Delivered" webhook before Shopify sends the "Order Created" webhook (due to network delays), the relational integrity might temporarily complain until the eventual consistency loop catches up.
+3. **Cold Start Sparsity**: For a brand new merchant with 2 days of data, the Dead Stock Agent will confidently (and wrongly) flag almost everything as slow-moving. It lacks a "minimum data threshold" circuit breaker.
